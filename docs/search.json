@@ -1,10 +1,66 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "teaching_ml4ps.html",
+    "href": "teaching_ml4ps.html",
+    "title": "Machine Learning and Data Science for Power System",
     "section": "",
-    "text": "About this site"
+    "text": "Course code: Smart Grid Technology (ELEC97077), MSc Future Power Networks (FPN)\nAffiliation: Department of EEE, Imperial College London\nLevel: Master\nCourse duration: 5 hours lecture and 1 hour tutorial.\nRole: Lecturing, coursework, demonstration, tutorial, and marking.\nYear: 2024-2025, 2025-2026"
+  },
+  {
+    "objectID": "teaching_ml4ps.html#course-material",
+    "href": "teaching_ml4ps.html#course-material",
+    "title": "Machine Learning and Data Science for Power System",
+    "section": "Course Material",
+    "text": "Course Material\n\n2023-2024 [lecture notes, coursework],\n2025-2026 [lecture notes]."
+  },
+  {
+    "objectID": "teaching_ml4ps.html#module-aims",
+    "href": "teaching_ml4ps.html#module-aims",
+    "title": "Machine Learning and Data Science for Power System",
+    "section": "Module Aims",
+    "text": "Module Aims\nIntroduce core ML concepts and methods relevant to modern power system operation, forecasting, security, and data-driven decision making. Students will learn basic supervised + unsupervised ML, performance metrics, model selection, and a first look at time-series foundation models."
+  },
+  {
+    "objectID": "teaching_ml4ps.html#learning-outcomes",
+    "href": "teaching_ml4ps.html#learning-outcomes",
+    "title": "Machine Learning and Data Science for Power System",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end of this module, students should be able to:\n\ndefine and distinguish supervised vs unsupervised learning\nimplement and tune basic ML models (linear regression, logistic regression, SVM, PCA, k-means)\nevaluate ML models using MSE, F1, TPR/FPR, etc\nunderstand generalization, overfitting, and regularization\nconduct hyperparameter tuning with a proper validation pipeline\nunderstand high-level concepts of time-series foundation models (e.g. Chronos) (New in 2025-2026)\nuse pretrained Time-Series Foundation Models (e.g. Amazon Chronos) for energy forecasting (New in 2025-2026)"
+  },
+  {
+    "objectID": "teaching_ml4ps.html#indicative-topics",
+    "href": "teaching_ml4ps.html#indicative-topics",
+    "title": "Machine Learning and Data Science for Power System",
+    "section": "Indicative Topics",
+    "text": "Indicative Topics\n\nIntroduction\n\nwhy ML is needed in modern power systems\ndata-driven vs model-driven approaches\n\nSupervised Learning\n\nlinear regression + polynomial basis\nlogistic regression + cross entropy\nsupport vector machine (hard/soft margin intuition)\n\nUnsupervised Learning\n\nprincipal component analysis (dimension reduction)\nk-means clustering\n\nPerformance Assessment\n\nregression: MSE\nclassification: TPR, FPR, FNR, TNR, F1\n\nModel Capacity / Overfitting\n\nbias–variance trade-off\nregularization (weight decay)\n\nHyperparameters & Validation\n\ntrain/validation/test split\ngrid search\n\nSpecial Topics (New in 2025-2026)\n\nNo Free Lunch Theorem\nFoundation Models (definition & transferability)\nTime-Series Foundation Models (e.g. Amazon Chronos)\nwhere to obtain real power system data (ENTSO-E, ERA5, etc.)"
+  },
+  {
+    "objectID": "teaching_ml4ps.html#outcomes-of-the-course-work",
+    "href": "teaching_ml4ps.html#outcomes-of-the-course-work",
+    "title": "Machine Learning and Data Science for Power System",
+    "section": "Outcomes of the course work",
+    "text": "Outcomes of the course work\nBased on the lecture notes, the course work trains students to apply modern machine learning and data science methods to power system operation, forecasting and security. The module integrates theory from lecture notes (data-driven modelling, probabilistic forecasting, state estimation, attack modelling) with hands-on coursework tasks on real grid data.\nAfter completing the coursework, students will be able to:\n\nConstruct complete ML pipelines for power system applications.\nUnderstand zero-shot learning, autoregression, and covariate-informed forecasting (New in 2025-2026).\nUse pretrained Time-Series Foundation Models (e.g. Amazon Chronos) for energy forecasting (New in 2025-2026).\nCollect and preprocess power system datasets (including missing time stamps / irregular sampling) (New in 2025-2026).\nBuild power network measurement matrices under DC power flow assumptions (A matrix, Bpf, Bpi).\nPerform DC state estimation using weighted least squares and correctly handle reference buses.\nDesign chi-square based Bad Data Detection (BDD) with controlled false positive rate.\nTrain and evaluate machine learning classifiers for FDI attack detection on measurement data.\nPresent solutions using pseudo-code, equations and clear experimental methodology."
+  },
+  {
+    "objectID": "teaching_datascience.html",
+    "href": "teaching_datascience.html",
+    "title": "Wangkun Xu Homepage",
+    "section": "",
+    "text": "Course code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Lecturing with Dr. Daphne Tuncer.\nYear: 2025-2026\nDescrption: This is a master level short course where I work with the students with the basic data science and machine learning techniques for energy sector with hands-on exercises."
+  },
+  {
+    "objectID": "teaching_datascience.html#guest-lecturer-data-science-and-digitalization-in-energy-sector-msc-in-sustainable-energy-futures-imperial-college-london",
+    "href": "teaching_datascience.html#guest-lecturer-data-science-and-digitalization-in-energy-sector-msc-in-sustainable-energy-futures-imperial-college-london",
+    "title": "Wangkun Xu Homepage",
+    "section": "",
+    "text": "Course code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Lecturing with Dr. Daphne Tuncer.\nYear: 2025-2026\nDescrption: This is a master level short course where I work with the students with the basic data science and machine learning techniques for energy sector with hands-on exercises."
+  },
+  {
+    "objectID": "teaching_datascience.html#course-material",
+    "href": "teaching_datascience.html#course-material",
+    "title": "Wangkun Xu Homepage",
+    "section": "Course Material",
+    "text": "Course Material\n\n2025-2026 (in progress)."
   },
   {
     "objectID": "news.html",
@@ -18,62 +74,125 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "I am insterested in the intersection of machine learning, optimisation, and system dynamics, with a focus on efficient and robust power system operation and control under high penetration of renewable.\nHere are some of my recent research works:\n\nSmart Predict-and-Optimize\n\nXu, Wangkun, and Fei Teng. “Task-aware machine unlearning and its application in load forecasting.” IEEE Transactions on Power Systems (2024). [paper link, code].\nXu, Wangkun, Jianhong Wang, and Fei Teng. “E2E-AT: A Unified Framework for Tackling Uncertainty in Task-Aware End-to-End Learning.” In Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, no. 14, pp. 16220-16227. 2024. [paper link, code].\n\n\n\nLearning-based Power System Stability-Constrained Optimization\n\nXu, Wangkun, Zhongda Chu, Florin Capitanescu, and Fei Teng. “On the Incorporation of Stability Constraints into Sequential Operational Scheduling.” arXiv preprint arXiv:2411.11652 (2024) [paper link].\nXu, Wangkun, Qian Chen, Pudong Ge, Zhongda Chu, and Fei Teng. “Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation.” ISFT-EU (2024) [paper link, code].\n\n\n\nPower System Digitalization and Cyber Security\n\nXu, Wangkun, Martin Higgins, Jianhong Wang, Imad M. Jaimoukha, and Fei Teng. “Blending data and physics against false data injection attack: An event-triggered moving target defence approach.” IEEE Transactions on Smart Grid 14, no. 4 (2022): 3176-3188. [paper link, code].\nXu, Wangkun, Imad M. Jaimoukha, and Fei Teng. “Robust moving target defence against false data injection attacks in power grids.” IEEE Transactions on Information Forensics and Security 18 (2022): 29-40. [paper link, code].\nBellizio, Federica, Wangkun Xu, Dawei Qiu, Yujian Ye, Dimitrios Papadaskalopoulos, Jochen L. Cremer, Fei Teng, and Goran Strbac. “Transition to digitalized paradigms for security control and decentralized electricity market.” Proceedings of the IEEE 111, no. 7 (2022): 744-761. [paper link].\n\n\n\nOther Researches\n\nBuffelli, Davide, Jamie McGowan, Wangkun Xu (internship work), Alexandru Cioba, Da-shan Shiu, Guillaume Hennequin, and Alberto Bernacchia. “Exact, Tractable Gauss-Newton Optimization in Deep Reversible Architectures Reveal Poor Generalization.” In The Thirty-eighth Annual Conference on Neural Information Processing Systems. [paper link].\nWang, Jianhong, Wangkun Xu (co-first) , Yunjie Gu, Wenbin Song, and Tim C. Green. “Multi-agent reinforcement learning for active voltage control on power distribution networks.” Advances in Neural Information Processing Systems 34 (2021): 3271-3284 [paper link, code]."
+    "text": "I am insterested in the intersection of machine learning, optimisation, and system dynamics, with a focus on efficient and robust power system operation and control under high penetration of renewable.\nHere are some of my recent research works:"
   },
   {
-    "objectID": "teaching_supervise.html",
-    "href": "teaching_supervise.html",
-    "title": "Teaching and Supervision",
+    "objectID": "research.html#sequential-decision-making",
+    "href": "research.html#sequential-decision-making",
+    "title": "Research",
+    "section": "Sequential Decision Making",
+    "text": "Sequential Decision Making\n\nNew Framework for Data-Optimization Co-design\n\nXu, Wangkun, Zhongda Chu, and Fei Teng. “LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations.” arXiv preprint arXiv:2505.05203 (2025). [paper link, code].\n\n\n\nDecision-Focused Learning (Smart Predict-and-Optimize)\n\nXu, Wangkun, and Fei Teng. “Task-aware machine unlearning and its application in load forecasting.” IEEE Transactions on Power Systems (2024). [paper link, code].\nXu, Wangkun, Jianhong Wang, and Fei Teng. “E2E-AT: A Unified Framework for Tackling Uncertainty in Task-Aware End-to-End Learning.” In Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, no. 14, pp. 16220-16227. 2024. [paper link, code].\nZhang, Haipeng, Xu, Wangkun, et al. “Decision-Focused Learning for Power System Decision-Making Under Uncertainty.” IEEE Transactions on Power Systems (2025). [paper link].\n\n\n\nConstraint Learning for Stability Constrained Optimization\n\nXu, Wangkun, Zhongda Chu, Florin Capitanescu, and Fei Teng. “On the Incorporation of Stability Constraints into Sequential Operational Scheduling.” arXiv preprint arXiv:2411.11652 (2024) [paper link].\nXu, Wangkun, Qian Chen, Pudong Ge, Zhongda Chu, and Fei Teng. “Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation.” ISFT-EU (2024) [paper link, code]."
+  },
+  {
+    "objectID": "research.html#new-methods-for-efficient-power-system-optimization",
+    "href": "research.html#new-methods-for-efficient-power-system-optimization",
+    "title": "Research",
+    "section": "New Methods for Efficient Power System Optimization",
+    "text": "New Methods for Efficient Power System Optimization\n\nQuantum Computing\n\nHong, Wei, Xu, Wangkun (corresponding author), and Fei Teng. “Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment.” arXiv preprint arXiv:2502.15917 (2025). [paper link]."
+  },
+  {
+    "objectID": "research.html#power-system-digitalization-and-cyber-security",
+    "href": "research.html#power-system-digitalization-and-cyber-security",
+    "title": "Research",
+    "section": "Power System Digitalization and Cyber Security",
+    "text": "Power System Digitalization and Cyber Security\n\nXu, Wangkun, Martin Higgins, Jianhong Wang, Imad M. Jaimoukha, and Fei Teng. “Blending data and physics against false data injection attack: An event-triggered moving target defence approach.” IEEE Transactions on Smart Grid 14, no. 4 (2022): 3176-3188. [paper link, code].\nXu, Wangkun, Imad M. Jaimoukha, and Fei Teng. “Robust moving target defence against false data injection attacks in power grids.” IEEE Transactions on Information Forensics and Security 18 (2022): 29-40. [paper link, code].\nBellizio, Federica, Xu, Wangkun, Dawei Qiu, Yujian Ye, Dimitrios Papadaskalopoulos, Jochen L. Cremer, Fei Teng, and Goran Strbac. “Transition to digitalized paradigms for security control and decentralized electricity market.” Proceedings of the IEEE 111, no. 7 (2022): 744-761. [paper link].\nHiggins, Martin, Xu, Wangkun, Fei Teng, and Thomas Parisini. “Cyber–physical risk assessment for false data injection attacks considering moving target defences: Best practice application of respective cyber and physical reinforcement assets to defend against FDI attacks.” International Journal of Information Security 22, no. 3 (2023): 579-589. [paper link]."
+  },
+  {
+    "objectID": "research.html#other-researches",
+    "href": "research.html#other-researches",
+    "title": "Research",
+    "section": "Other Researches",
+    "text": "Other Researches\n\nBuffelli, Davide, Jamie McGowan, Xu, Wangkun (internship work), Alexandru Cioba, Da-shan Shiu, Guillaume Hennequin, and Alberto Bernacchia. “Exact, Tractable Gauss-Newton Optimization in Deep Reversible Architectures Reveal Poor Generalization.” In The Thirty-eighth Annual Conference on Neural Information Processing Systems. [paper link].\nWang, Jianhong, Xu, Wangkun (co-first author), Yunjie Gu, Wenbin Song, and Tim C. Green. “Multi-agent reinforcement learning for active voltage control on power distribution networks.” Advances in neural information processing systems 34 (2021): 3271-3284. [paper link, code]."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Teaching\n\nGuest Lecturer: Machine Learning for Power System\n\nCourse code: Smart Grid Technology (ELEC97077), MSc Future Power Networks (FPN)\nAffiliation: Department of EEE, Imperial College London\nLevel: Master\nRole: Lecturing, coursework preperation, demonstration, tutorial, and marking with Dr. Fei Teng.\nYear: 2023-2024 [lecture notes, coursework], 2025-2026 (Lecture notes are in progress).\n\n\n\nGuest Lecturer: Data Science and Digitalization in Energy Sector\n\nCourse code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Lecturing with Dr. Daphne Tuncer.\nYear: 2025-2026 (Lecture notes are in progress).\nDescrption: This is a master level short course where I work with the students with the basic data science and machine learning techniques for energy sector with hands-on exercises.\n\n\n\nTeaching Assistant: Data Science and Digitalization in Energy Sector\n\nCourse code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Tutorial instructor and assessor with Dr. Daphne Tuncer.\nYear: 2021-2025\nDescrption: This is a master level short course where I work with the students on topic about data analysis and regulation on EVs, smart grid, and more.\n\nSome of the topics of previous years include:\n\nTracking Europe’s electricity data: a longitudinal analysis of energy dynamics.\nExploring the development of a data-based federation of digital twins for smart building management.\nData privacy-by-design: implication for data-driven management of smart buildings.\nAssessing current UK decarbonization progress through low carbon technology deployment.\nAnalysing electric vehicle usage – The case of commercial fleet operators. and more.\n\nI have successfully supervised students for publiching their project works on various confernces including:\n\nT. Bunsantrakul, K. Christiaens, A. Duran, B. Owoka, M. S. Velasco Garcia, W. Xu, D. Tuncer, “Poster: Unveiling Urban Emissions from Bangkok Air Monitoring,” Extended Abstract, in the proceedings of the 2024 ACM Internet Measurements Conference, November 2024.\nA. Belcher, M. Esteva, A. Lam, R. Ramadhani, A. Rayhan, W. Xu, D. Tuncer “Assessing the Efficacy of IoT-based Forest Fire Detection: a Practical Use Case,” Technical report, arXiv, arXiv:2407.09117, July 2024.\nL. Barrera Cano, S. Raza, B. Sekibo, A. Siafaras, Q.Wolf, Z. Yin, W. Xu, and D. Tuncer, “A Comparative Perspective of Data Regulation Frameworks and their Implications for Connected Vehicles,”in the Proc. of ACM SIGCOMM 2022 Joint Workshops on (TAURIN+BGI ’22), Amsterdam, Netherlands, August, 2022.\n\n\n\n\nSupervision\nI have also been supervising several master and undergraduate students for their research (thesis) projects.\n\nMs. Alina Zhu (UG, 2024-2025) on topic about machine unlearning.\nMr. Renwei Liu (UG, 2024-2025) on topic about machine unlearning and poisoning attack.\n\nI have been co-supervising several PhD students including:\n\nMs. Ying Yu (2024-now) on topic about efficient data-center operation with grid integration.\nMr. Le Fang (2023-now) on topic about learning for power system dynamics.\nMr. Wei Hong (2023-now) on topic about quantum computing for power system optimization."
+    "text": "Course code: Smart Grid Technology (ELEC97077), MSc Future Power Networks (FPN)\nAffiliation: Department of EEE, Imperial College London\nLevel: Master\nCourse duration: 5 hours lecture and 1 hour tutorial.\nRole: Lecturing, coursework, demonstration, tutorial, and marking.\nYear: 2024-2025, 2025-2026\nSee detailed description and course material here.\n\n\n\n\n\nCourse code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Lecturing.\nCourse duration: 4 hour lecture (2-hour lecture and 2-hour tutorial).\nYear: 2025-2026\nSee detailed description and course material here."
+  },
+  {
+    "objectID": "teaching.html#current",
+    "href": "teaching.html#current",
+    "title": "Teaching",
+    "section": "",
+    "text": "Course code: Smart Grid Technology (ELEC97077), MSc Future Power Networks (FPN)\nAffiliation: Department of EEE, Imperial College London\nLevel: Master\nCourse duration: 5 hours lecture and 1 hour tutorial.\nRole: Lecturing, coursework, demonstration, tutorial, and marking.\nYear: 2024-2025, 2025-2026\nSee detailed description and course material here.\n\n\n\n\n\nCourse code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Lecturing.\nCourse duration: 4 hour lecture (2-hour lecture and 2-hour tutorial).\nYear: 2025-2026\nSee detailed description and course material here."
+  },
+  {
+    "objectID": "teaching.html#previous",
+    "href": "teaching.html#previous",
+    "title": "Teaching",
+    "section": "Previous",
+    "text": "Previous\n\nTeaching Assistant: Data Science and Digitalization in Energy Sector\n\nSee detailed description and course material here."
+  },
+  {
+    "objectID": "supervision.html",
+    "href": "supervision.html",
+    "title": "Supervision",
+    "section": "",
+    "text": "I have been supervising several Ph.D., master and undergraduate students for their research (thesis) projects.\n\nPh.D. students:\n\nMs. Ying Yu (2024-now) on topic about efficient data-center operation with grid integration.\nMr. Wei Hong (2023-now) on topic about quantum computing for power system optimization.\n\nPaper: Hong, Wei, Wangkun Xu (corresponding author), and Fei Teng. “Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment.” arXiv preprint arXiv:2502.15917 (2025).\n\nMr. Le Fang (2023-now) on topic about learning for power system dynamics.\n\n\n\nMaster students project papers (within the Data Science and Digitalization in Energy Sector here):\n\nA. Pedraza, E. Geirsson, F. Adams, M. Ahmad, N. Dawda, W. Xu, Y. Yu, D. Tuncer, “Assessing land eligibility for solar photovoltaic deployment in the UK,” in the proceedings of 60th International Universities Power Engineering Conference, Sept. 2025.\nAnthony, Belcher, Wangkun Xu, et al. “Assessing the Efficacy of IoT-based Forest Fire Detection: a Practical Use Case.” arXiv preprint arXiv:2407.09117 (2024).\nBunsantrakul, Teeratat, Wangkun Xu, et al. “Poster: Unveiling Urban Emissions from Bangkok Air Monitoring.” Proceedings of the 2024 ACM on Internet Measurement Conference. 2024.\nCano, L. Barrera, Wangkun Xu, et al. “A comparative perspective of data regulation frameworks and their implications for connected vehicles.” Proceedings of the ACM SIGCOMM Joint Workshops on Technologies, Applications, and Uses of a Responsible Internet and Building Greener Internet. 2022.\n\n\n\nUG students thesis project:\n\nMs. Alina Zhu (2024-2025) on topic about machine unlearning. Thesis title: Machine Unlearning via Neural Network Linearization and Influence Functions.\nMr. Renwei Liu (2024-2025) on topic about machine unlearning and poisoning attack. Thesis title: Effect of Poisoning Attack on Influence Function and the Performance of Different MU Algorithms."
+  },
+  {
+    "objectID": "teaching_datasrienceta.html",
+    "href": "teaching_datasrienceta.html",
+    "title": "Wangkun Xu Homepage",
+    "section": "",
+    "text": "Course code: MSc in Sustainable Energy Futures\nAffiliation: Energy Futures Lab, Imperial College London\nLevel: Master\nRole: Tutorial instructor and assessor with Dr. Daphne Tuncer.\nYear: 2021-2025\nDescrption: This is a master level short course where I work with the students on topic about data analysis and regulation on EVs, smart grid, and more.\n\nSome of the topics of previous years include:\n\nTracking Europe’s electricity data: a longitudinal analysis of energy dynamics.\nExploring the development of a data-based federation of digital twins for smart building management.\nData privacy-by-design: implication for data-driven management of smart buildings.\nAssessing current UK decarbonization progress through low carbon technology deployment.\nAnalysing electric vehicle usage – The case of commercial fleet operators. and more."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dr. Wangkun Xu",
     "section": "",
-    "text": "I’m a Research Associate at Control and Power Research Group at EEE Department, Imperial College London, under the UK - Electric Power Innovation for a Carbon-free Society Center (UK-EPICS) project.\nI received my Ph.D. degree in Electrical Engineering from Imperial College London in 2024. Before that, I received my M.Sc. degree in Control Systems from Imperial College London in 2019 and my B.Eng. degree in Electrical and Electronic Engineering from University of Liverpool and Xi-an Jiaotong Liverpool University in 2018. I also interned at MediaTek research, UK as deep learning research intern in 2024.\nI am the recipient of EEE Department Ph.D. Scholarship at Imperial in 2019, William Rathbone Medal at UoL in 2018, and David Inglis Prize at UoL in 2017 for academic excellence. I am also a member of IEEE, IET, and AFHEA.\n\nMy current research interests include a broad intersection of machine learning, optimisation, and system dynamics, with a focus on efficient and robust power system operation and control under high penetration of renewable."
+    "text": "I’m a Research Associate at the Control and Power Research Group in the Department of Electrical and Electronic Engineering, Imperial College London, working under the UK - Electric Power Innovation for a Carbon-free Society Center (UK-EPICS) project.\nI received my Ph.D. degree in Electrical Engineering from Imperial College London in 2024. Prior to that, I completed my M.Sc. degree in Control Systems from Imperial College London in 2019 (Distinction, Top One) and my B.Eng. degree in Electrical and Electronic Engineering from the University of Liverpool and Xi’an Jiaotong-Liverpool University in 2018 (First Class with Honors, Top One). I also served as a Deep Learning Research Intern at MediaTek Research, UK in 2024.\nI am the recipient of the EEE Department Ph.D. Scholarship at Imperial College London (2019), the William Rathbone Medal at the University of Liverpool (2018), and the David Inglis Prize at the University of Liverpool (2017) for academic excellence. I am also a member of IEEE, IET, and an Associate Fellow of the Higher Education Academy (AFHEA).\nMy current research interests lie at the intersection of machine learning, optimisation, and system dynamics, with a particular focus on efficient and robust power system operation and control under high penetration of renewable energy sources."
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
     "title": "Dr. Wangkun Xu",
     "section": "",
-    "text": "I’m a Research Associate at Control and Power Research Group at EEE Department, Imperial College London, under the UK - Electric Power Innovation for a Carbon-free Society Center (UK-EPICS) project.\nI received my Ph.D. degree in Electrical Engineering from Imperial College London in 2024. Before that, I received my M.Sc. degree in Control Systems from Imperial College London in 2019 and my B.Eng. degree in Electrical and Electronic Engineering from University of Liverpool and Xi-an Jiaotong Liverpool University in 2018. I also interned at MediaTek research, UK as deep learning research intern in 2024.\nI am the recipient of EEE Department Ph.D. Scholarship at Imperial in 2019, William Rathbone Medal at UoL in 2018, and David Inglis Prize at UoL in 2017 for academic excellence. I am also a member of IEEE, IET, and AFHEA.\n\nMy current research interests include a broad intersection of machine learning, optimisation, and system dynamics, with a focus on efficient and robust power system operation and control under high penetration of renewable."
+    "text": "I’m a Research Associate at the Control and Power Research Group in the Department of Electrical and Electronic Engineering, Imperial College London, working under the UK - Electric Power Innovation for a Carbon-free Society Center (UK-EPICS) project.\nI received my Ph.D. degree in Electrical Engineering from Imperial College London in 2024. Prior to that, I completed my M.Sc. degree in Control Systems from Imperial College London in 2019 (Distinction, Top One) and my B.Eng. degree in Electrical and Electronic Engineering from the University of Liverpool and Xi’an Jiaotong-Liverpool University in 2018 (First Class with Honors, Top One). I also served as a Deep Learning Research Intern at MediaTek Research, UK in 2024.\nI am the recipient of the EEE Department Ph.D. Scholarship at Imperial College London (2019), the William Rathbone Medal at the University of Liverpool (2018), and the David Inglis Prize at the University of Liverpool (2017) for academic excellence. I am also a member of IEEE, IET, and an Associate Fellow of the Higher Education Academy (AFHEA).\nMy current research interests lie at the intersection of machine learning, optimisation, and system dynamics, with a particular focus on efficient and robust power system operation and control under high penetration of renewable energy sources."
   },
   {
-    "objectID": "index.html#news-more",
-    "href": "index.html#news-more",
+    "objectID": "index.html#news",
+    "href": "index.html#news",
     "title": "Dr. Wangkun Xu",
-    "section": "News More",
-    "text": "News More\n\n2025-09-01 [Personal] I have completed the course on “2nd International Summer School on IBR-dominated Power Systems”, orgnized by Imperial College and Tsinghua University, hosted by Tsinghua University, Beijing, China.\n2025-09-01 [Presentation] I presented “On the Incorporation of Stability Constraints into Sequential Operational Scheduling” on\n2025-08-15 [Personal] I am starting as vistor scholar at Tsinghua University, Beijing, China for 2 months, hosted by Assoc. Prof. Ning Zhang.\n2025-07-01 [Presentation] Mr. Guoxuan Cui presented our work “On the Incorporation of Stability Constraints into Sequential Operational Scheduling” on IEEE PES General Meeting 2025 in Austin, TX at the paper forum section.\n2025-05-10 [Paper]: New preprint available “LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations” [paper link].\n2025-04-01 [Event]: We will host the Inaugrial launch of the CIGRE UK London Region Universities Hub at Imperial College London on 06th May. You can now register for the event here.\n2025-03-01 [Personal]: I have been officially awarded as Associate Fellow of Higher Education Academy (AFHEA) by Advance HE!\n2025-02-21 [Paper]: New preprint available ‘Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment’ led by Mr. Wei Hong [paper link].\n2025-02-01 [Paper]: Our paper “On the Incorporation of Stability Constraints into Sequential Operational Scheduling” [paper link] has been accepted by PES General Meeting 2025.\n2025-02-26 [Event]: I presented my work on “Smart Predict and Optimize for Energy Forecast” in G-PST/ESIG Webinar Series: Reliable Energy Forecasting for Power System Operations with Dr. Akylas Stratigakos. The slides and recording are available at the website."
+    "section": "News",
+    "text": "News\nFor more news, please visit the News page.\n\n2025-09-01 [Personal] I have completed the course on “2nd International Summer School on IBR-dominated Power Systems”, organized by Imperial College and Tsinghua University, hosted by Tsinghua University, Beijing, China.\n2025-09-01 [Presentation] I presented “On the Incorporation of Stability Constraints into Sequential Operational Scheduling”.\n2025-08-15 [Personal] I am starting as a visiting scholar at Tsinghua University, Beijing, China for 2 months, hosted by Assoc. Prof. Ning Zhang.\n2025-07-01 [Presentation] Mr. Guoxuan Cui presented our work “On the Incorporation of Stability Constraints into Sequential Operational Scheduling” at the IEEE PES General Meeting 2025 in Austin, TX at the paper forum section.\n2025-05-10 [Paper] New preprint available: “LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations” [paper link].\n2025-04-01 [Event] We will host the Inaugural launch of the CIGRE UK London Region Universities Hub at Imperial College London on 06th May. You can now register for the event here.\n2025-03-01 [Personal] I have been officially awarded as Associate Fellow of Higher Education Academy (AFHEA) by Advance HE!\n2025-02-21 [Paper] New preprint available: “Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment” led by Mr. Wei Hong [paper link].\n2025-02-01 [Paper] Our paper “On the Incorporation of Stability Constraints into Sequential Operational Scheduling” [paper link] has been accepted by PES General Meeting 2025.\n2025-02-26 [Event] I presented my work on “Smart Predict and Optimize for Energy Forecast” in the G-PST/ESIG Webinar Series: Reliable Energy Forecasting for Power System Operations with Dr. Akylas Stratigakos. The slides and recording are available at the website."
   },
   {
     "objectID": "index.html#academic-services",
     "href": "index.html#academic-services",
     "title": "Dr. Wangkun Xu",
     "section": "Academic Services",
-    "text": "Academic Services\n\nAssociate Fellow of Higher Education Academy (AFHEA) (2025-Now).\nMember of IEEE and IEEE Power and Energy Society (2022-Now).\nMember of IET (2023-Now).\nCommittee member of the London Hub of the CIGRE UK Next Generation Network (CIGRE-UK-NGN) (2025-Now)."
+    "text": "Academic Services\n\nAssociate Fellow of Higher Education Academy (AFHEA) (2025–Present)\nMember of IEEE and IEEE Power and Energy Society (2022–Present)\nMember of IET (2023–Present)\nCommittee Member of the London Hub of the CIGRE UK Next Generation Network (CIGRE-UK-NGN) (2025–Present)"
   },
   {
     "objectID": "index.html#work-experience",
     "href": "index.html#work-experience",
     "title": "Dr. Wangkun Xu",
     "section": "Work Experience",
-    "text": "Work Experience\n\nResearch Associate, Control and Power Research Group, Imperial College London, 2024 - Present. Working with Assoc. Prof. Fei Teng and Prof. Mark J. O’malley.\nGuest Lecturer, Department of EEE, Imperial College London, 2024 - Present. Teaching the course Machine Learning for Power System.\nGuest Lecturer, Energy Futures Lab, Imperial College London, 2024 - Present. Teaching the course Data Science and Digitalization in Energy Sector.\nVisiting Scholar, Department of Electrical Engineering, Tsinghua University, China, Aug.-Oct., 2025. Hosted by Assoc. Prof. Ning Zhang.\nDeep Learning Research Intern, MediaTek Research, UK, 2024. Working with Prof. Guillaume Hennequin and Dr. Alberto Bernacchia.\nPostgraduate Teaching Assistant, Energy Future Lab and Department of EEE, Imperial College London, 2019 - 2024"
+    "text": "Work Experience\n\nResearch Associate, Control and Power Research Group, Imperial College London (2024–Present)\nWorking with Assoc. Prof. Fei Teng and Prof. Mark J. O’Malley.\nGuest Lecturer, Department of EEE, Imperial College London (2024–Present)\nTeaching the course Machine Learning for Power System.\nGuest Lecturer, Energy Futures Lab, Imperial College London (2024–Present)\nTeaching the course Data Science and Digitalization in Energy Sector.\nVisiting Scholar, Department of Electrical Engineering, Tsinghua University, China (Aug.–Oct. 2025)\nHosted by Assoc. Prof. Ning Zhang.\nDeep Learning Research Intern, MediaTek Research, UK (2024)\nWorking with Prof. Guillaume Hennequin and Dr. Alberto Bernacchia.\nPostgraduate Teaching Assistant, Energy Futures Lab and Department of EEE, Imperial College London (2019–2024)"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Dr. Wangkun Xu",
     "section": "Education",
-    "text": "Education\n\nPh.D. in Electrical Engineering, Imperial College London, 2024\n\nSupervisors: Dr. Fei Teng and Dr. Imad. M. Jaimoukha.\nThesis: Blending Data and Model for Robust and Secure Power System Operaitons [link].\n\nM.Sc. in Control Systems, Imperial College London, 2019\n\nDistinction, Top One\nSupervisor: Dr. Imad M. Jaimoukha.\nThesis: Robust Positively Invariante Sets for Model Preidictive Control\n\nB.Eng. in Electrical and Electronic Engineering, University of Liverpool and Xi-an Jiaotong Liverpool University, 2018\n\nFirst Class with Honors, Top One\nSupervisor: Dr. Lin Jiang.\nThesis: High Efficient Vector Control of Induction Motor Drives"
+    "text": "Education\n\nPh.D. in Electrical Engineering, Imperial College London (2024)\nSupervisors: Dr. Fei Teng and Dr. Imad M. Jaimoukha\nThesis: Blending Data and Model for Robust and Secure Power System Operations [link]\nM.Sc. in Control Systems, Imperial College London (2019)\nDistinction, Top One\nSupervisor: Dr. Imad M. Jaimoukha\nThesis: Robust Positively Invariant Sets for Model Predictive Control\nB.Eng. in Electrical and Electronic Engineering, University of Liverpool and Xi’an Jiaotong-Liverpool University (2018)\nFirst Class with Honors, Top One\nSupervisor: Dr. Lin Jiang\nThesis: High Efficient Vector Control of Induction Motor Drives"
   },
   {
     "objectID": "index.html#awards",
     "href": "index.html#awards",
     "title": "Dr. Wangkun Xu",
     "section": "Awards",
-    "text": "Awards\n\nPoster Award, Tsinghua University, 2019\n\n2nd International Summer School on IBR-Dominated Power Systems.\n\nEEE Department Ph.D. Scholarship, Imperial College London, 2019\n\nThe only recipient in Control and Power research group in 2019.\nFully funded Ph.D. scholarship for distinguished performance for achieving Master degree from the Department of Electrical and Electronic Engineering, covering both tuition fees and living expenses for 3.5 years.\n\nWilliam Rathbone Medal, University of Liverpool, 2018\n\nAwarded to a candidate who has specially distinguished himself or herself in the final year of the programme for the degree of Meng (Hons) or BEng (Hons).\n\nDavid Inglis Prize, University of Liverpool, 2017\n\nAwarded to the most distinguished him/herself in the second year study in University of Liverpool in the department of EEE."
+    "text": "Awards\n\nPoster Award, Tsinghua University (2019)\n2nd International Summer School on IBR-Dominated Power Systems\nEEE Department Ph.D. Scholarship, Imperial College London (2019)\nThe only recipient in the Control and Power research group in 2019.\nFully funded Ph.D. scholarship for distinguished performance in achieving a Master’s degree from the Department of Electrical and Electronic Engineering, covering both tuition fees and living expenses for 3.5 years.\nWilliam Rathbone Medal, University of Liverpool (2018)\nAwarded to a candidate who has specially distinguished themselves in the final year of the programme for the degree of MEng (Hons) or BEng (Hons).\nDavid Inglis Prize, University of Liverpool (2017)\nAwarded to the most distinguished student in the second year of study in the Department of EEE at the University of Liverpool."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]

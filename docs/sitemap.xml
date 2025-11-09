@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/about.html</loc>
-    <lastmod>2024-12-21T10:57:25.000Z</lastmod>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching_ml4ps.html</loc>
+    <lastmod>2025-11-09T20:38:11.434Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching_datascience.html</loc>
+    <lastmod>2025-11-09T19:53:51.267Z</lastmod>
   </url>
   <url>
     <loc>https://xuwkk.github.io/wangkun_xu/news.html</loc>
@@ -10,14 +14,26 @@
   </url>
   <url>
     <loc>https://xuwkk.github.io/wangkun_xu/research.html</loc>
-    <lastmod>2024-12-23T15:47:08.000Z</lastmod>
+    <lastmod>2025-11-09T20:32:44.144Z</lastmod>
   </url>
   <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/teaching_supervise.html</loc>
-    <lastmod>2025-11-06T12:02:31.315Z</lastmod>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching.html</loc>
+    <lastmod>2025-11-09T20:42:59.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/supervision.html</loc>
+    <lastmod>2025-11-09T20:18:09.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching_datasrienceta.html</loc>
+    <lastmod>2025-11-09T20:03:29.199Z</lastmod>
   </url>
   <url>
     <loc>https://xuwkk.github.io/wangkun_xu/index.html</loc>
-    <lastmod>2025-11-06T11:59:17.234Z</lastmod>
+    <lastmod>2025-11-09T20:41:58.858Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/about.html</loc>
+    <lastmod>2024-12-21T10:57:25.000Z</lastmod>
   </url>
 </urlset>

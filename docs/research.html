@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4959819ddf78ab05365f633ffe577066.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-de02b4b42a964af47b078c552af716e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,12 +107,16 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching_supervise.html"> 
-<span class="menu-text">Teaching and Supervision</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./research.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./supervision.html"> 
+<span class="menu-text">Supervision</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -125,7 +129,7 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -133,15 +137,23 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#smart-predict-and-optimize" id="toc-smart-predict-and-optimize" class="nav-link active" data-scroll-target="#smart-predict-and-optimize">Smart Predict-and-Optimize</a></li>
-  <li><a href="#learning-based-power-system-stability-constrained-optimization" id="toc-learning-based-power-system-stability-constrained-optimization" class="nav-link" data-scroll-target="#learning-based-power-system-stability-constrained-optimization">Learning-based Power System Stability-Constrained Optimization</a></li>
+  <li><a href="#sequential-decision-making" id="toc-sequential-decision-making" class="nav-link active" data-scroll-target="#sequential-decision-making">Sequential Decision Making</a>
+  <ul class="collapse">
+  <li><a href="#new-framework-for-data-optimization-co-design" id="toc-new-framework-for-data-optimization-co-design" class="nav-link" data-scroll-target="#new-framework-for-data-optimization-co-design">New Framework for Data-Optimization Co-design</a></li>
+  <li><a href="#decision-focused-learning-smart-predict-and-optimize" id="toc-decision-focused-learning-smart-predict-and-optimize" class="nav-link" data-scroll-target="#decision-focused-learning-smart-predict-and-optimize">Decision-Focused Learning (Smart Predict-and-Optimize)</a></li>
+  <li><a href="#constraint-learning-for-stability-constrained-optimization" id="toc-constraint-learning-for-stability-constrained-optimization" class="nav-link" data-scroll-target="#constraint-learning-for-stability-constrained-optimization">Constraint Learning for Stability Constrained Optimization</a></li>
+  </ul></li>
+  <li><a href="#new-methods-for-efficient-power-system-optimization" id="toc-new-methods-for-efficient-power-system-optimization" class="nav-link" data-scroll-target="#new-methods-for-efficient-power-system-optimization">New Methods for Efficient Power System Optimization</a>
+  <ul class="collapse">
+  <li><a href="#quantum-computing" id="toc-quantum-computing" class="nav-link" data-scroll-target="#quantum-computing">Quantum Computing</a></li>
+  </ul></li>
   <li><a href="#power-system-digitalization-and-cyber-security" id="toc-power-system-digitalization-and-cyber-security" class="nav-link" data-scroll-target="#power-system-digitalization-and-cyber-security">Power System Digitalization and Cyber Security</a></li>
   <li><a href="#other-researches" id="toc-other-researches" class="nav-link" data-scroll-target="#other-researches">Other Researches</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -150,7 +162,7 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -164,33 +176,53 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 
 <p>I am insterested in the intersection of machine learning, optimisation, and system dynamics, with a focus on efficient and robust power system operation and control under high penetration of renewable.</p>
 <p>Here are some of my recent research works:</p>
-<section id="smart-predict-and-optimize" class="level3">
-<h3 class="anchored" data-anchor-id="smart-predict-and-optimize">Smart Predict-and-Optimize</h3>
+<section id="sequential-decision-making" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-decision-making">Sequential Decision Making</h2>
+<section id="new-framework-for-data-optimization-co-design" class="level3">
+<h3 class="anchored" data-anchor-id="new-framework-for-data-optimization-co-design">New Framework for Data-Optimization Co-design</h3>
+<ul>
+<li><strong>Xu, Wangkun</strong>, Zhongda Chu, and Fei Teng. “LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations.” arXiv preprint arXiv:2505.05203 (2025). [<a href="https://arxiv.org/pdf/2505.05203">paper link</a>, <a href="https://github.com/xuwkk/lapso_exp">code</a>].</li>
+</ul>
+</section>
+<section id="decision-focused-learning-smart-predict-and-optimize" class="level3">
+<h3 class="anchored" data-anchor-id="decision-focused-learning-smart-predict-and-optimize">Decision-Focused Learning (Smart Predict-and-Optimize)</h3>
 <ul>
 <li><p><strong>Xu, Wangkun</strong>, and Fei Teng. “Task-aware machine unlearning and its application in load forecasting.” IEEE Transactions on Power Systems (2024). [<a href="https://ieeexplore.ieee.org/abstract/document/10472091">paper link</a>, <a href="https://github.com/xuwkk/task_aware_machine_unlearning">code</a>].</p></li>
 <li><p><strong>Xu, Wangkun</strong>, Jianhong Wang, and Fei Teng. “E2E-AT: A Unified Framework for Tackling Uncertainty in Task-Aware End-to-End Learning.” In Proceedings of the AAAI Conference on Artificial Intelligence, vol.&nbsp;38, no. 14, pp.&nbsp;16220-16227. 2024. [<a href="https://arxiv.org/abs/2312.10587">paper link</a>, <a href="https://github.com/xuwkk/E2E-AT">code</a>].</p></li>
+<li><p>Zhang, Haipeng, <strong>Xu, Wangkun</strong>, et al.&nbsp;“Decision-Focused Learning for Power System Decision-Making Under Uncertainty.” IEEE Transactions on Power Systems (2025). [<a href="https://ieeexplore.ieee.org/abstract/document/11122623">paper link</a>].</p></li>
 </ul>
 </section>
-<section id="learning-based-power-system-stability-constrained-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="learning-based-power-system-stability-constrained-optimization">Learning-based Power System Stability-Constrained Optimization</h3>
+<section id="constraint-learning-for-stability-constrained-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="constraint-learning-for-stability-constrained-optimization">Constraint Learning for Stability Constrained Optimization</h3>
 <ul>
 <li><p><strong>Xu, Wangkun</strong>, Zhongda Chu, Florin Capitanescu, and Fei Teng. “On the Incorporation of Stability Constraints into Sequential Operational Scheduling.” arXiv preprint arXiv:2411.11652 (2024) [<a href="https://arxiv.org/abs/2411.11652">paper link</a>].</p></li>
 <li><p><strong>Xu, Wangkun</strong>, Qian Chen, Pudong Ge, Zhongda Chu, and Fei Teng. “Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation.” ISFT-EU (2024) [<a href="https://arxiv.org/abs/2407.15045">paper link</a>, <a href="https://github.com/xuwkk/frequency_sample_ad">code</a>].</p></li>
 </ul>
 </section>
-<section id="power-system-digitalization-and-cyber-security" class="level3">
-<h3 class="anchored" data-anchor-id="power-system-digitalization-and-cyber-security">Power System Digitalization and Cyber Security</h3>
+</section>
+<section id="new-methods-for-efficient-power-system-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="new-methods-for-efficient-power-system-optimization">New Methods for Efficient Power System Optimization</h2>
+<section id="quantum-computing" class="level3">
+<h3 class="anchored" data-anchor-id="quantum-computing">Quantum Computing</h3>
+<ul>
+<li>Hong, Wei, <strong>Xu, Wangkun (corresponding author)</strong>, and Fei Teng. “Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment.” arXiv preprint arXiv:2502.15917 (2025). [<a href="https://arxiv.org/pdf/2502.15917">paper link</a>].</li>
+</ul>
+</section>
+</section>
+<section id="power-system-digitalization-and-cyber-security" class="level2">
+<h2 class="anchored" data-anchor-id="power-system-digitalization-and-cyber-security">Power System Digitalization and Cyber Security</h2>
 <ul>
 <li><p><strong>Xu, Wangkun</strong>, Martin Higgins, Jianhong Wang, Imad M. Jaimoukha, and Fei Teng. “Blending data and physics against false data injection attack: An event-triggered moving target defence approach.” IEEE Transactions on Smart Grid 14, no. 4 (2022): 3176-3188. [<a href="https://ieeexplore.ieee.org/abstract/document/9998121">paper link</a>, <a href="https://github.com/xuwkk/DDET-MTD">code</a>].</p></li>
 <li><p><strong>Xu, Wangkun</strong>, Imad M. Jaimoukha, and Fei Teng. “Robust moving target defence against false data injection attacks in power grids.” IEEE Transactions on Information Forensics and Security 18 (2022): 29-40. [<a href="https://ieeexplore.ieee.org/document/9905637">paper link</a>, <a href="https://github.com/xuwkk/Robust_MTD">code</a>].</p></li>
-<li><p>Bellizio, Federica, <strong>Wangkun Xu</strong>, Dawei Qiu, Yujian Ye, Dimitrios Papadaskalopoulos, Jochen L. Cremer, Fei Teng, and Goran Strbac. “Transition to digitalized paradigms for security control and decentralized electricity market.” Proceedings of the IEEE 111, no. 7 (2022): 744-761. [<a href="https://ieeexplore.ieee.org/abstract/document/9756414">paper link</a>].</p></li>
+<li><p>Bellizio, Federica, <strong>Xu, Wangkun</strong>, Dawei Qiu, Yujian Ye, Dimitrios Papadaskalopoulos, Jochen L. Cremer, Fei Teng, and Goran Strbac. “Transition to digitalized paradigms for security control and decentralized electricity market.” Proceedings of the IEEE 111, no. 7 (2022): 744-761. [<a href="https://ieeexplore.ieee.org/abstract/document/9756414">paper link</a>].</p></li>
+<li><p>Higgins, Martin, <strong>Xu, Wangkun</strong>, Fei Teng, and Thomas Parisini. “Cyber–physical risk assessment for false data injection attacks considering moving target defences: Best practice application of respective cyber and physical reinforcement assets to defend against FDI attacks.” International Journal of Information Security 22, no. 3 (2023): 579-589. [<a href="https://link.springer.com/article/10.1007/s10207-022-00621-7">paper link</a>].</p></li>
 </ul>
 </section>
-<section id="other-researches" class="level3">
-<h3 class="anchored" data-anchor-id="other-researches">Other Researches</h3>
+<section id="other-researches" class="level2">
+<h2 class="anchored" data-anchor-id="other-researches">Other Researches</h2>
 <ul>
-<li><p>Buffelli, Davide, Jamie McGowan, <strong>Wangkun Xu (internship work)</strong>, Alexandru Cioba, Da-shan Shiu, Guillaume Hennequin, and Alberto Bernacchia. “Exact, Tractable Gauss-Newton Optimization in Deep Reversible Architectures Reveal Poor Generalization.” In The Thirty-eighth Annual Conference on Neural Information Processing Systems. [<a href="https://arxiv.org/abs/2411.07979">paper link</a>].</p></li>
-<li><p>Wang, Jianhong, <strong>Wangkun Xu (co-first)</strong> , Yunjie Gu, Wenbin Song, and Tim C. Green. “Multi-agent reinforcement learning for active voltage control on power distribution networks.” Advances in Neural Information Processing Systems 34 (2021): 3271-3284 [<a href="https://arxiv.org/abs/2110.14300">paper link</a>, <a href="https://github.com/Future-Power-Networks/MAPDN">code</a>].</p></li>
+<li><p>Buffelli, Davide, Jamie McGowan, <strong>Xu, Wangkun (internship work)</strong>, Alexandru Cioba, Da-shan Shiu, Guillaume Hennequin, and Alberto Bernacchia. “Exact, Tractable Gauss-Newton Optimization in Deep Reversible Architectures Reveal Poor Generalization.” In The Thirty-eighth Annual Conference on Neural Information Processing Systems. [<a href="https://arxiv.org/abs/2411.07979">paper link</a>].</p></li>
+<li><p>Wang, Jianhong, <strong>Xu, Wangkun (co-first author)</strong>, Yunjie Gu, Wenbin Song, and Tim C. Green. “Multi-agent reinforcement learning for active voltage control on power distribution networks.” Advances in neural information processing systems 34 (2021): 3271-3284. [<a href="https://arxiv.org/abs/2110.14300">paper link</a>, <a href="https://github.com/Future-Power-Networks/MAPDN">code</a>].</p></li>
 </ul>
 
 
