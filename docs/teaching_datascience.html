@@ -139,6 +139,10 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
   <ul>
   <li><a href="#guest-lecturer-data-science-and-digitalization-in-energy-sector-msc-in-sustainable-energy-futures-imperial-college-london" id="toc-guest-lecturer-data-science-and-digitalization-in-energy-sector-msc-in-sustainable-energy-futures-imperial-college-london" class="nav-link active" data-scroll-target="#guest-lecturer-data-science-and-digitalization-in-energy-sector-msc-in-sustainable-energy-futures-imperial-college-london">Guest Lecturer: Data Science and Digitalization in Energy Sector, MSc in Sustainable Energy Futures, Imperial College London</a></li>
   <li><a href="#course-material" id="toc-course-material" class="nav-link" data-scroll-target="#course-material">Course Material</a></li>
+  <li><a href="#module-aims" id="toc-module-aims" class="nav-link" data-scroll-target="#module-aims">Module Aims</a></li>
+  <li><a href="#intended-learning-outcomes-ilos" id="toc-intended-learning-outcomes-ilos" class="nav-link" data-scroll-target="#intended-learning-outcomes-ilos">Intended learning outcomes (ILOs)</a></li>
+  <li><a href="#content-outline" id="toc-content-outline" class="nav-link" data-scroll-target="#content-outline">Content outline</a></li>
+  <li><a href="#tutorial-outline-on-github" id="toc-tutorial-outline-on-github" class="nav-link" data-scroll-target="#tutorial-outline-on-github">Tutorial Outline (on GitHub)</a></li>
   </ul>
 </nav>
     </div>
@@ -156,13 +160,92 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 <li><strong>Level</strong>: Master</li>
 <li><strong>Role</strong>: Lecturing with <a href="https://www.imperial.ac.uk/computing/outreach/beyond-the-classroom/meet-our-female-academics/dr-daphne-tuncer/">Dr.&nbsp;Daphne Tuncer</a>.</li>
 <li><strong>Year</strong>: 2025-2026</li>
-<li><strong>Descrption</strong>: This is a master level short course where I work with the students with the basic data science and machine learning techniques for energy sector with hands-on exercises.</li>
+<li><strong>Descrption</strong>: This is a master level short course where I work with the students with the basic data science and machine learning techniques for energy sector with hands-on exercises. The module is designed to have 2-hour lecture and 2-hour tutorial.</li>
 </ul>
 </section>
 <section id="course-material" class="level2">
 <h2 class="anchored" data-anchor-id="course-material">Course Material</h2>
 <ul>
-<li>2025-2026 (in progress).</li>
+<li>2025-2026 [<a href="material/lecture_note/MECH70039_Intro2ML_2526.pdf">lecture notes</a>].</li>
+<li>2025-2026 [<a href="https://github.com/xuwkk/intro2ml-coding-tutorial">github tutorial</a>].</li>
+</ul>
+</section>
+<section id="module-aims" class="level2">
+<h2 class="anchored" data-anchor-id="module-aims">Module Aims</h2>
+<p>Equip students with a practical ML “toolkit” for energy-system data problems (forecasting, classification, anomaly detection, clustering), and the ability to reason about generalization, model selection, and data quality in real pipelines.</p>
+</section>
+<section id="intended-learning-outcomes-ilos" class="level2">
+<h2 class="anchored" data-anchor-id="intended-learning-outcomes-ilos">Intended learning outcomes (ILOs)</h2>
+<p>By the end, students should be able to:</p>
+<ol type="1">
+<li>Formulate ML tasks in energy systems (regression vs classification; supervised vs unsupervised).</li>
+<li>Train and interpret baseline models: linear regression, logistic regression, and SVM (concept + when to use).</li>
+<li>Apply PCA and k-means for dimensionality reduction, visualization, and clustering on unlabeled data.</li>
+<li>Use appropriate performance metrics (MSE; TPR/FPR/TNR/FNR; F1) and explain tradeoffs.</li>
+<li>Diagnose underfitting/overfitting, explain model capacity, and apply regularization.</li>
+<li>Conduct hyperparameter tuning using a validation set / grid search, and justify correct data splitting.</li>
+<li>Describe (at a high level) reinforcement learning and when it is relevant (coverage: overview only).</li>
+<li>Understand the motivation and concept of foundation models, with emphasis on time-series foundation models and Chronos.</li>
+<li>Identify key energy data sources (market/load/generation; weather) and articulate “garbage in, garbage out” risks.</li>
+</ol>
+</section>
+<section id="content-outline" class="level2">
+<h2 class="anchored" data-anchor-id="content-outline">Content outline</h2>
+<ul>
+<li>Part A — ML framing for energy systems
+<ul>
+<li>Why ML now: renewables, inverter-dominated grids, big data availability (RTU/PMU/smart meters, etc).</li>
+<li>Task taxonomy: regression vs classification; supervised vs unsupervised; RL overview.</li>
+</ul></li>
+<li>Part B — Supervised learning essentials
+<ul>
+<li>Linear regression (incl.&nbsp;nonlinear features / polynomial regression; MSE &amp; least squares).</li>
+<li>Logistic regression (sigmoid, cross-entropy, gradient descent intuition).</li>
+<li>SVM (max-margin idea; convex formulation; hyperparameters; practical use via sklearn).</li>
+</ul></li>
+<li>Part C — Unsupervised learning essentials
+<ul>
+<li>PCA (dimensionality reduction, visualization; why unsupervised).</li>
+<li>k-means (algorithm steps; choosing k for anomaly/normal separation).</li>
+</ul></li>
+<li>Part D — Model evaluation &amp; generalization
+<ul>
+<li>Regression metrics (MSE) and classification metrics (TPR/FPR/TNR/FNR; F1).</li>
+<li>Capacity, underfit vs overfit, and regularization (weight decay).</li>
+</ul></li>
+<li>Part E — Special topics
+<ul>
+<li>No Free Lunch intuition + why foundation models “shift the tradeoff”.</li>
+<li>Time-series foundation models; Chronos overview and energy forecasting example.</li>
+<li>Data: where to obtain energy + weather datasets (ENTSO-E transparency, ERA5; regional operators).</li>
+</ul></li>
+</ul>
+</section>
+<section id="tutorial-outline-on-github" class="level2">
+<h2 class="anchored" data-anchor-id="tutorial-outline-on-github">Tutorial Outline (on GitHub)</h2>
+<p>Repo: [<a href="https://github.com/xuwkk/intro2ml-coding-tutorial">github</a>].</p>
+<p>What students do:</p>
+<ul>
+<li><code>svm.py</code>: Binary classification with SVM on make_moons (non-linearly separable toy dataset).</li>
+<li><code>pca.py</code>: PCA dimensionality reduction + 2D visualization on the Wine dataset.</li>
+<li><code>kmeans+pca.py</code>: k-means clustering on Iris, then PCA to 2D for visualization.</li>
+<li><code>chronos_example.py</code>: Energy price forecasting using Amazon Chronos (zero-shot time-series forecasting).</li>
+</ul>
+<p>How students run it:</p>
+<ul>
+<li>Recommended: Google Colab (no local setup).</li>
+<li>Local: install dependencies:
+<ul>
+<li>Core: <code>numpy</code>, <code>matplotlib</code>, <code>scikit-learn</code></li>
+<li>Chronos-only: <code>pandas[pyarrow]</code>, <code>chronos-forecasting</code></li>
+</ul></li>
+</ul>
+<p>Skills the tutorial reinforces:</p>
+<ul>
+<li>End-to-end sklearn pattern: load data → preprocess → fit → evaluate → visualize</li>
+<li>How hyperparameters change decision boundaries / clusters / embeddings (SVM, k-means)</li>
+<li>Practical intuition for representation learning via PCA</li>
+<li>Modern angle: zero-shot forecasting with a time-series foundation model (using Amazon Chronos as example).</li>
 </ul>
 
 
