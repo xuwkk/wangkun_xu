@@ -9,7 +9,7 @@
 <meta name="author" content="Dr Wangkun Xu">
 <meta name="description" content="Academic website of Dr Wangkun Xu">
 
-<title>Teaching – Wangkun Xu</title>
+<title>Blog – Wangkun Xu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-4412607aa6b8aa0fd61536c99a29c053.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b7f71073174c40cd8ab8dae1e37c9972.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4412607aa6b8aa0fd61536c99a29c053.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b7f71073174c40cd8ab8dae1e37c9972.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,48 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-current-courses .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-code','listing-institution','listing-level','listing-role','listing-duration','listing-years','listing-status','listing-priority','listing-details','listing-notes','listing-tutorial',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-title","listing-code","listing-institution","listing-level","listing-role","listing-duration","listing-years","listing-status","listing-priority","listing-details","listing-notes","listing-tutorial"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-current-courses'] = new List('listing-current-courses', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-previous-courses .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-code','listing-institution','listing-level','listing-role','listing-duration','listing-years','listing-status','listing-priority','listing-details','listing-notes','listing-tutorial',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
-      
-      searchColumns: ["listing-title","listing-code","listing-institution","listing-level","listing-role","listing-duration","listing-years","listing-status","listing-priority","listing-details","listing-notes","listing-tutorial"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-previous-courses'] = new List('listing-previous-courses', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -166,12 +138,10 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles/site.css">
-<meta property="og:title" content="Teaching – Wangkun Xu">
-<meta property="og:description" content="Current courses, teaching materials, and previous teaching at Imperial College London.">
-<meta property="og:image" content="https://xuwkk.github.io/wangkun_xu/images/teaching_2024.JPG">
+<link rel="stylesheet" href="../styles/site.css">
+<link rel="alternate" type="application/rss+xml" title="Wangkun Xu" href="index.xml" data-external="1"><meta property="og:title" content="Blog – Wangkun Xu">
+<meta property="og:description" content="Learning notes on machine learning, optimisation, and power systems.">
 <meta property="og:site_name" content="Wangkun Xu">
-<meta property="og:image:alt" content="Wangkun Xu teaching in 2024">
 </head>
 
 <body class="nav-fixed">
@@ -181,7 +151,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Wangkun Xu</span>
     </a>
   </div>
@@ -192,35 +162,35 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link" href="../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
+    <a class="nav-link" href="../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./supervision.html"> 
+    <a class="nav-link" href="../supervision.html"> 
 <span class="menu-text">Supervision</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./news.html"> 
+    <a class="nav-link" href="../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html"> 
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -239,28 +209,18 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#current-teaching" id="toc-current-teaching" class="nav-link active" data-scroll-target="#current-teaching">Current teaching</a></li>
-  <li><a href="#previous-teaching" id="toc-previous-teaching" class="nav-link" data-scroll-target="#previous-teaching">Previous teaching</a></li>
-  <li><a href="#open-teaching-materials" id="toc-open-teaching-materials" class="nav-link" data-scroll-target="#open-teaching-materials">Open teaching materials</a></li>
-  <li><a href="#in-the-classroom" id="toc-in-the-classroom" class="nav-link" data-scroll-target="#in-the-classroom">In the classroom</a></li>
-  </ul>
-</nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RW5nbGlzaA==">English <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG93ZXIlMjBzeXN0ZW1z">Power systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHlUb3JjaA==">PyTorch <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU0JUI4JUFEJUU2JTk2JTg3">中文 <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Teaching</h1>
+<h1 class="title">Blog</h1>
 </div>
 
 <div>
   <div class="description">
-    Current courses, teaching materials, and previous teaching at Imperial College London.
+    Learning notes on machine learning, optimisation, and power systems.
   </div>
 </div>
 
@@ -277,183 +237,118 @@ window.Quarto = {
 </header>
 
 
-<p>My teaching focuses on practical machine learning, data science, and optimisation for modern energy systems. Course pages provide concise descriptions, learning outcomes, lecture notes, coursework, and open tutorials.</p>
-<section id="current-teaching" class="level2">
-<h2 class="anchored" data-anchor-id="current-teaching">Current teaching</h2>
-<div id="listing-current-courses" class="quarto-listing quarto-listing-container-custom">
-<div class="course-list list">
+<p>Technical notes and worked explanations developed through research, teaching, and independent study.</p>
+<div class="blog-language-filter" data-blog-language-filter="" role="group" aria-label="Filter blog posts by language" hidden="">
+<p><span class="blog-language-label">Language</span> <button class="blog-language-button" type="button" data-blog-language="" aria-controls="listing-listing" aria-pressed="true">All</button> <button class="blog-language-button" type="button" data-blog-language="English" aria-controls="listing-listing" aria-pressed="false">English</button> <button class="blog-language-button" type="button" data-blog-language="中文" aria-controls="listing-listing" aria-pressed="false">中文</button></p>
+</div>
+<p class="visually-hidden" data-blog-language-status="" aria-live="polite">
+</p>
 
-  <article class="course-card" data-index="0" data-listing-priority-sort="1">
-    <div>
-      <p class="course-code listing-code">ELEC97077 · Smart Grid Technology</p>
-      <p class="course-title listing-title"><a href="teaching/ml4ps.html">Machine Learning and Data Science for Power Systems</a></p>
-      <p class="course-meta">MSc Future Power Networks · Department of Electrical and Electronic Engineering, Imperial College London</p>
-      <p class="course-role">Guest Lecturer · Lecturing, coursework, demonstrations, tutorials, and marking · 5 hours of lectures + 1-hour tutorial</p>
-    </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2024–2026</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/ml4ps.html">Details</a>
-        <a class="course-action" href="material/teaching/elec97077/ELEC97077_ML4PS_LectureNote_2526.pdf">Notes</a>
-        
-      </div>
-    </div>
-  </article>
 
-  <article class="course-card" data-index="1" data-listing-priority-sort="2">
-    <div>
-      <p class="course-code listing-code">MECH70039 · Data Science and Digitalisation</p>
-      <p class="course-title listing-title"><a href="teaching/ml-energy-systems.html">Introduction to Machine Learning for Energy Systems</a></p>
-      <p class="course-meta">MSc Sustainable Energy Futures · Energy Futures Lab, Imperial College London</p>
-      <p class="course-role">Guest Lecturer · Lecture and hands-on tutorial · 2-hour lecture + 2-hour tutorial</p>
-    </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2025–2026</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/ml-energy-systems.html">Details</a>
-        <a class="course-action" href="material/teaching/mech70039/MECH70039_Intro2ML_2526.pdf">Notes</a>
-        <a class="course-action" href="https://github.com/xuwkk/intro2ml-coding-tutorial">Tutorial</a>
-      </div>
-    </div>
-  </article>
 
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UG93ZXIlMjBzeXN0ZW1zJTJDRW5nbGlzaA==" data-listing-date-sort="1790031600000" data-listing-file-modified-sort="1790092067536" data-listing-date-modified-sort="1790031600000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1042">
+<div class="thumbnail">
+<p><a href="../blog/posts/power-flow-modeling/index.html" class="no-external"></a></p><a href="../blog/posts/power-flow-modeling/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/power-flow-modeling/img/2024-06-10-13-26-13.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../blog/posts/power-flow-modeling/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/power-flow-modeling/index.html" class="no-external">Power System Operation: AC and DC Power Flow Model</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../blog/posts/power-flow-modeling/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('UG93ZXIlMjBzeXN0ZW1z'); return false;">
+Power systems
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RW5nbGlzaA=='); return false;">
+English
+</div>
+</div>
+<div class="listing-description">
+<a href="../blog/posts/power-flow-modeling/index.html" class="no-external">AC and DC power-flow modelling in matrix form, following the MATPOWER convention.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/power-flow-modeling/index.html" class="no-external">
+<div class="listing-date">
+Sep 22, 2026
+</div>
+<div class="listing-author">
+Wangkun Xu
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="UHlUb3JjaCUyQyVFNCVCOCVBRCVFNiU5NiU4Nw==" data-listing-date-sort="1785711600000" data-listing-file-modified-sort="1786035273149" data-listing-date-modified-sort="1785711600000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1295">
+<div class="thumbnail">
+<p><a href="../blog/posts/symbolic-trace/index.html" class="no-external"></a></p><a href="../blog/posts/symbolic-trace/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../blog/posts/symbolic-trace/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/symbolic-trace/index.html" class="no-external">PyTorch FX symbolic_trace 学习笔记</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../blog/posts/symbolic-trace/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('UHlUb3JjaA=='); return false;">
+PyTorch
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('JUU0JUI4JUFEJUU2JTk2JTg3'); return false;">
+中文
+</div>
+</div>
+<div class="listing-description">
+<a href="../blog/posts/symbolic-trace/index.html" class="no-external">理解 torch.fx symbolic tracing、GraphModule 和 FX graph nodes。</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/symbolic-trace/index.html" class="no-external">
+<div class="listing-date">
+Aug 3, 2026
+</div>
+<div class="listing-author">
+Wangkun Xu
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-</section>
-<section id="previous-teaching" class="level2">
-<h2 class="anchored" data-anchor-id="previous-teaching">Previous teaching</h2>
-<div id="listing-previous-courses" class="quarto-listing quarto-listing-container-custom">
-<div class="course-list list">
-
-  <article class="course-card" data-index="0" data-listing-priority-sort="1">
-    <div>
-      <p class="course-code listing-code">MSc Sustainable Energy Futures</p>
-      <p class="course-title listing-title"><a href="teaching/data-science-ta.html">Data Science and Digitalisation in the Energy Sector</a></p>
-      <p class="course-meta">Master's project teaching · Energy Futures Lab, Imperial College London</p>
-      <p class="course-role">Postgraduate Teaching Assistant · Tutorial instruction and assessment</p>
-    </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2021–2025</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/data-science-ta.html">Details</a>
-        
-        
-      </div>
-    </div>
-  </article>
-
-  <article class="course-card" data-index="1" data-listing-priority-sort="2">
-    <div>
-      <p class="course-code listing-code">Imperial College Summer School 2026</p>
-      <p class="course-title listing-title"><a href="teaching/summer-school-2026.html">Introduction to Machine Learning with Examples in Power Systems</a></p>
-      <p class="course-meta">Imperial College Summer School · Department of Electrical and Electronic Engineering, Imperial College London</p>
-      <p class="course-role">Guest Lecturer · Lecturing and group-project tutorials · 6 hours</p>
-    </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2026</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/summer-school-2026.html">Details</a>
-        <a class="course-action" href="material/teaching/summer-school-2026/ImperialCollege_SummerSchool_26.pdf">Notes</a>
-        <a class="course-action" href="https://github.com/xuwkk/intro2ml-coding-tutorial">Tutorial</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="course-card" data-index="2" data-listing-priority-sort="3">
-    <div>
-      <p class="course-code listing-code">3rd International Summer School on IBR-Dominated Power Systems</p>
-      <p class="course-title listing-title"><a href="teaching/ibr-summer-school-2026.html">An Open-Source Toolbox for Embedding Neural Stability Surrogates in Stability-Constrained Optimization</a></p>
-      <p class="course-meta">International Summer School · University of Strathclyde, Glasgow</p>
-      <p class="course-role">Guest Lecturer</p>
-    </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2026</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/ibr-summer-school-2026.html">Details</a>
-        
-        <a class="course-action" href="https://github.com/xuwkk/Neural-SmallSignal-UC-Tutorial">Tutorial</a>
-      </div>
-    </div>
-  </article>
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="open-teaching-materials" class="level2">
-<h2 class="anchored" data-anchor-id="open-teaching-materials">Open teaching materials</h2>
-<div class="resource-list">
-<div class="resource-item">
-<strong>ML for Power Systems</strong><br><a href="material/teaching/elec97077/ELEC97077_ML4PS_LectureNote_2526.pdf">2025–26 lecture notes</a>
-</div>
-<div class="resource-item">
-<strong>Introduction to ML for Energy Systems</strong><br><a href="material/teaching/mech70039/MECH70039_Intro2ML_2526.pdf">2025–26 lecture notes</a>
-</div>
-<div class="resource-item">
-<strong>Imperial College Summer School</strong><br><a href="material/teaching/summer-school-2026/ImperialCollege_SummerSchool_26.pdf">2026 lecture notes</a>
-</div>
-<div class="resource-item">
-<strong>IBR summer school tutorial</strong><br><a href="https://github.com/xuwkk/Neural-SmallSignal-UC-Tutorial">Small-signal stability-constrained unit commitment</a>
-</div>
-<div class="resource-item">
-<strong>Hands-on Python tutorial</strong><br><a href="https://github.com/xuwkk/intro2ml-coding-tutorial">SVM, PCA, k-means, and Chronos</a>
-</div>
-<div class="resource-item">
-<strong>Previous coursework</strong><br><a href="material/teaching/elec97077/ELEC97077_Coursework_2425.pdf">ELEC97077 coursework brief</a>
-</div>
-</div>
-</section>
-<section id="in-the-classroom" class="level2">
-<h2 class="anchored" data-anchor-id="in-the-classroom">In the classroom</h2>
-<div class="teaching-carousel" data-teaching-carousel="">
-<div class="teaching-carousel-toolbar">
-<p class="teaching-carousel-hint">
-Swipe, scroll, or use the arrows
-</p>
-<div class="teaching-carousel-controls" aria-label="Teaching gallery controls" hidden="">
-<button class="teaching-carousel-button" type="button" data-carousel-prev="" aria-controls="teaching-gallery" aria-label="Previous teaching photograph">
-←
-</button>
-<button class="teaching-carousel-button" type="button" data-carousel-next="" aria-controls="teaching-gallery" aria-label="Next teaching photograph">
-→
-</button>
-</div>
-</div>
-<div id="teaching-gallery" class="teaching-gallery" data-carousel-track="" role="region" aria-roledescription="carousel" aria-label="Teaching photographs" tabindex="0">
-<figure class="figure">
-<img src="images/teaching_2024.JPG" alt="Wangkun Xu teaching in 2024" class="figure-img">
-<figcaption>
-Teaching in 2024
-</figcaption>
-</figure>
-<figure class="figure">
-<img src="images/teaching_2025.jpeg" alt="Wangkun Xu teaching in 2025" class="figure-img">
-<figcaption>
-Teaching in 2025
-</figcaption>
-</figure>
-<figure class="figure">
-<img src="images/teaching_2026.jpg" alt="Wangkun Xu teaching machine learning at Imperial College London in 2026" class="figure-img">
-<figcaption>
-Teaching in 2026
-</figcaption>
-</figure>
-</div>
-<p class="visually-hidden" data-carousel-status="" aria-live="polite">
-</p>
-</div>
-
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script src="scripts/teaching-carousel.js"></script>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script src="../scripts/blog-language-filter.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -894,5 +789,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

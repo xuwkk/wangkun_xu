@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr Wangkun Xu">
+<meta name="dcterms.date" content="2026-09-22">
+<meta name="description" content="Academic website of Dr Wangkun Xu">
+
+<title>Power System Operation: AC and DC Power Flow Model – Wangkun Xu</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4412607aa6b8aa0fd61536c99a29c053.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-b7f71073174c40cd8ab8dae1e37c9972.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TSYFSJPRKH"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles/site.css">
+<meta property="og:title" content="Power System Operation: AC and DC Power Flow Model – Wangkun Xu">
+<meta property="og:description" content="AC and DC power-flow modelling in matrix form, following the MATPOWER convention.">
+<meta property="og:image" content="https://xuwkk.github.io/wangkun_xu/blog/posts/power-flow-modeling/img/2024-06-10-13-26-13.png">
+<meta property="og:site_name" content="Wangkun Xu">
+<meta property="og:image:height" content="246">
+<meta property="og:image:width" content="509">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Wangkun Xu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../software.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../supervision.html"> 
+<span class="menu-text">Supervision</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="mailto:wangkun.xu18@imperial.ac.uk" title="Email" class="quarto-navigation-tool px-1" aria-label="Email"><i class="bi bi-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/wangkun-xu/" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/xuwkk" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://scholar.google.com/citations?user=-RuGgBoAAAAJ&amp;hl=en" title="Google Scholar" class="quarto-navigation-tool px-1" aria-label="Google Scholar"><i class="bi bi-google"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Power System Operation: AC and DC Power Flow Model</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Power systems</div>
+    <div class="quarto-category">English</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    AC and DC power-flow modelling in matrix form, following the MATPOWER convention.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wangkun Xu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 22, 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">September 22, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Generated by scripts/sync_blog.py. Edit the private source note or data/blog-sources.yml instead. -->
+<div lang="en-GB">
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this post, we will introduce the basic modelling method of power system operations. It can be a reference to the open-source package power system operation I am developing (<a href="https://github.com/xuwkk/gridforge">GridForge</a>).</p>
+<p>I mainly follow the modelling method from MATPOWER. A reference can be found by the MATPOWER Manual.</p>
+<p>Matrix form of the power flow model will be followed.</p>
+<section id="notation" class="level3">
+<h3 class="anchored" data-anchor-id="notation">Notation</h3>
+<p>The following notation is used throughout this post:</p>
+<ul>
+<li><span class="math inline">\(i,j\in\mathcal{B}\)</span> index buses, <span class="math inline">\(\ell\in\mathcal{L}\)</span> indexes branches, and <span class="math inline">\(k\in\mathcal{G}\)</span> indexes generators;</li>
+<li>italic lower-case symbols denote scalars, bold lower-case symbols denote vectors, and bold upper-case symbols denote matrices;</li>
+<li>descriptive labels such as <span class="math inline">\(\mathrm{bus}\)</span>, <span class="math inline">\(\mathrm{br}\)</span>, <span class="math inline">\(\mathrm{sh}\)</span>, <span class="math inline">\(\mathrm{shift}\)</span>, and <span class="math inline">\(\mathrm{red}\)</span> are typeset upright;</li>
+<li><span class="math inline">\(\mathrm{j}=\sqrt{-1}\)</span> denotes the imaginary unit, <span class="math inline">\((\cdot)^\top\)</span> denotes transpose, and <span class="math inline">\((\cdot)^\ast\)</span> denotes element-wise complex conjugation.</li>
+</ul>
+<p>Subscripts identify a component, location, or element index. Upright superscripts identify the source of a term, such as <span class="math inline">\(\boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}\)</span>, rather than an exponent.</p>
+</section>
+</section>
+<section id="ac-model" class="level2">
+<h2 class="anchored" data-anchor-id="ac-model">AC Model</h2>
+<section id="branch-model" class="level3">
+<h3 class="anchored" data-anchor-id="branch-model">Branch Model</h3>
+<p>The branch model is shown in the following figure.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/2024-06-10-13-26-13.png" class="img-fluid figure-img"></p>
+<figcaption>Branch Model</figcaption>
+</figure>
+</div>
+<ul>
+<li><span class="math inline">\(z_\ell=r_\ell+\mathrm{j}x_\ell\)</span>: series impedance of branch <span class="math inline">\(\ell\)</span>, with series admittance <span class="math inline">\(y_\ell=1/z_\ell\)</span>;</li>
+<li><span class="math inline">\(\tau_\ell\)</span> and <span class="math inline">\(\phi_\ell\)</span>: transformer tap-ratio magnitude and phase-shift angle in radians. The transformer is located at the from end of the branch. If there is no transformer, <span class="math inline">\(\tau_\ell=1\)</span> and <span class="math inline">\(\phi_\ell=0\)</span>;</li>
+<li><span class="math inline">\(b_{\mathrm{c},\ell}\)</span>: total branch-charging susceptance.</li>
+</ul>
+<p>For a single branch,</p>
+<p><span class="math display">\[
+\begin{bmatrix} i_{\mathrm{f},\ell} \\ i_{\mathrm{t},\ell} \end{bmatrix}
+= \mathbf{Y}_{\mathrm{br},\ell}
+\begin{bmatrix} v_{\mathrm{f},\ell} \\ v_{\mathrm{t},\ell} \end{bmatrix}
+\]</span></p>
+<p>where the branch admittance matrix <span class="math inline">\(\mathbf{Y}_{\mathrm{br},\ell}\)</span> follows from KCL:</p>
+<p><span class="math display">\[
+\mathbf{Y}_{\mathrm{br},\ell}
+=
+\begin{bmatrix}
+\left(y_\ell + \mathrm{j}\dfrac{b_{\mathrm{c},\ell}}{2}\right)
+\dfrac{1}{\tau_\ell^2}
+&amp;
+-y_\ell \dfrac{1}{\tau_\ell e^{-\mathrm{j}\phi_\ell}}
+\\
+-y_\ell \dfrac{1}{\tau_\ell e^{\mathrm{j}\phi_\ell}}
+&amp;
+y_\ell + \mathrm{j}\dfrac{b_{\mathrm{c},\ell}}{2}
+\end{bmatrix}
+\tag{1}
+\]</span></p>
+<p>Note that <span class="math inline">\(\mathbf{Y}_{\mathrm{br},\ell}\)</span> is generally not symmetric unless <span class="math inline">\(\phi_\ell=0\)</span>.</p>
+<p>Denote the four elements of the admittance matrix of branch <span class="math inline">\(\ell\)</span> as</p>
+<p><span class="math display">\[
+\mathbf{Y}_{\mathrm{br},\ell}
+=
+\begin{bmatrix}
+y_{\mathrm{ff},\ell} &amp; y_{\mathrm{ft},\ell} \\
+y_{\mathrm{tf},\ell} &amp; y_{\mathrm{tt},\ell}
+\end{bmatrix}
+\]</span></p>
+<p>Collecting each element over all branches gives the vectors <span class="math inline">\(\boldsymbol{y}_{\mathrm{ff}}\)</span>, <span class="math inline">\(\boldsymbol{y}_{\mathrm{ft}}\)</span>, <span class="math inline">\(\boldsymbol{y}_{\mathrm{tf}}\)</span>, and <span class="math inline">\(\boldsymbol{y}_{\mathrm{tt}}\)</span>.</p>
+<p>The from-side and to-side connection matrices <span class="math inline">\(\mathbf{C}_{\mathrm{f}}\)</span> and <span class="math inline">\(\mathbf{C}_{\mathrm{t}}\)</span> are defined such that <span class="math inline">\((\mathbf{C}_{\mathrm{f}})_{\ell i}=1\)</span> when bus <span class="math inline">\(i\)</span> is the from bus of branch <span class="math inline">\(\ell\)</span>, and <span class="math inline">\((\mathbf{C}_{\mathrm{t}})_{\ell j}=1\)</span> when bus <span class="math inline">\(j\)</span> is its to bus. All other entries are zero. The oriented branch-to-bus <strong>incidence matrix</strong> is</p>
+<p><span class="math display">\[
+\mathbf{A}=\mathbf{C}_{\mathrm{f}}-\mathbf{C}_{\mathrm{t}}.
+\]</span></p>
+</section>
+<section id="generator-model" class="level3">
+<h3 class="anchored" data-anchor-id="generator-model">Generator Model</h3>
+<p>The generator complex power injection can be written as</p>
+<p><span class="math display">\[
+\boldsymbol{s}_{\mathrm{g}}
+=
+\boldsymbol{p}_{\mathrm{g}}+\mathrm{j}\boldsymbol{q}_{\mathrm{g}}.
+\]</span></p>
+<p>The generator connection matrix <span class="math inline">\(\mathbf{C}_{\mathrm{g}}\)</span> is defined such that <span class="math inline">\((\mathbf{C}_{\mathrm{g}})_{ik}=1\)</span> if generator <span class="math inline">\(k\)</span> is connected to bus <span class="math inline">\(i\)</span>, and zero otherwise. Its contribution to bus complex-power injection is</p>
+<p><span class="math display">\[
+\boldsymbol{s}_{\mathrm{bus}}^{\mathrm{g}}
+=
+\mathbf{C}_{\mathrm{g}}\boldsymbol{s}_{\mathrm{g}}.
+\]</span></p>
+<p>Other type of generators, such as solar or wind renewables can be defined in the same way. The constant renewable power injection can also be viewed as negative load.</p>
+</section>
+<section id="load-model" class="level3">
+<h3 class="anchored" data-anchor-id="load-model">Load Model</h3>
+<p>A constant power load is modeled as active and reactive power consumption at each bus. The load complex power injection can be written as</p>
+<p><span class="math display">\[
+\boldsymbol{s}_{\mathrm{d}}
+=
+\boldsymbol{p}_{\mathrm{d}}+\mathrm{j}\boldsymbol{q}_{\mathrm{d}}.
+\]</span></p>
+</section>
+<section id="shunt-elements" class="level3">
+<h3 class="anchored" data-anchor-id="shunt-elements">Shunt Elements</h3>
+<p>A shunt-connected element, such as a capacitor or an inductor, is modeled as a fixed impedance to ground at a <strong>bus</strong>, whose admittance is</p>
+<p><span class="math display">\[
+y_{\mathrm{sh},i}
+=
+g_{\mathrm{sh},i}+\mathrm{j}b_{\mathrm{sh},i}.
+\]</span></p>
+<p>Collecting these quantities for all buses gives the vectors <span class="math inline">\(\boldsymbol{y}_{\mathrm{sh}}\)</span>, <span class="math inline">\(\boldsymbol{g}_{\mathrm{sh}}\)</span>, and <span class="math inline">\(\boldsymbol{b}_{\mathrm{sh}}\)</span>.</p>
+</section>
+<section id="network-equations" class="level3">
+<h3 class="anchored" data-anchor-id="network-equations">Network Equations</h3>
+<p>Let <span class="math inline">\(\boldsymbol{v}\)</span> be the bus-voltage vector and <span class="math inline">\(\boldsymbol{i}_{\mathrm{bus}}\)</span> be the bus-current-injection vector.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{i}_{\mathrm{bus}}
+&amp;= \mathbf{Y}_{\mathrm{bus}}\boldsymbol{v}, \\
+\boldsymbol{i}_{\mathrm{f}}
+&amp;= \mathbf{Y}_{\mathrm{f}}\boldsymbol{v}, \\
+\boldsymbol{i}_{\mathrm{t}}
+&amp;= \mathbf{Y}_{\mathrm{t}}\boldsymbol{v}.
+\end{aligned}
+\]</span></p>
+<p>with the system admittance matrices defined as</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{Y}_{\mathrm{f}}
+&amp;= \operatorname{diag}(\boldsymbol{y}_{\mathrm{ff}})\mathbf{C}_{\mathrm{f}}
++ \operatorname{diag}(\boldsymbol{y}_{\mathrm{ft}})\mathbf{C}_{\mathrm{t}}, \\
+\mathbf{Y}_{\mathrm{t}}
+&amp;= \operatorname{diag}(\boldsymbol{y}_{\mathrm{tf}})\mathbf{C}_{\mathrm{f}}
++ \operatorname{diag}(\boldsymbol{y}_{\mathrm{tt}})\mathbf{C}_{\mathrm{t}}, \\
+\mathbf{Y}_{\mathrm{bus}}
+&amp;= \mathbf{C}_{\mathrm{f}}^{\top}\mathbf{Y}_{\mathrm{f}}
++ \mathbf{C}_{\mathrm{t}}^{\top}\mathbf{Y}_{\mathrm{t}}
++ \operatorname{diag}(\boldsymbol{y}_{\mathrm{sh}}).
+\end{aligned}
+\]</span></p>
+<p>In detail, we have the bus current injection as</p>
+<p><span class="math display">\[
+\boldsymbol{i}_{\mathrm{bus}}
+=
+\mathbf{C}_{\mathrm{f}}^{\top}
+\operatorname{diag}(\boldsymbol{y}_{\mathrm{ff}})
+\mathbf{C}_{\mathrm{f}}\boldsymbol{v}
++ \mathbf{C}_{\mathrm{f}}^{\top}
+\operatorname{diag}(\boldsymbol{y}_{\mathrm{ft}})
+\mathbf{C}_{\mathrm{t}}\boldsymbol{v}
++ \mathbf{C}_{\mathrm{t}}^{\top}
+\operatorname{diag}(\boldsymbol{y}_{\mathrm{tf}})
+\mathbf{C}_{\mathrm{f}}\boldsymbol{v}
++ \mathbf{C}_{\mathrm{t}}^{\top}
+\operatorname{diag}(\boldsymbol{y}_{\mathrm{tt}})
+\mathbf{C}_{\mathrm{t}}\boldsymbol{v}
++ \operatorname{diag}(\boldsymbol{y}_{\mathrm{sh}})\boldsymbol{v}.
+\]</span></p>
+<p>For example, <span class="math inline">\(\mathbf{C}_{\mathrm{f}}\boldsymbol{v}\)</span> selects the from-bus voltage of each branch, <span class="math inline">\(\operatorname{diag}(\boldsymbol{y}_{\mathrm{ff}})
+\mathbf{C}_{\mathrm{f}}\boldsymbol{v}\)</span> gives the corresponding contribution to from-end branch current, and <span class="math inline">\(\mathbf{C}_{\mathrm{f}}^\top\)</span> aggregates those branch currents at buses.</p>
+<p>Then the complex power injection and flows can be written as (the power flow equation)</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{s}_{\mathrm{bus}}(\boldsymbol{v})
+&amp;= \operatorname{diag}(\boldsymbol{v})
+   \boldsymbol{i}_{\mathrm{bus}}^\ast
+= \operatorname{diag}(\boldsymbol{v})
+   \mathbf{Y}_{\mathrm{bus}}^\ast\boldsymbol{v}^\ast, \\
+\boldsymbol{s}_{\mathrm{f}}(\boldsymbol{v})
+&amp;= \operatorname{diag}(\mathbf{C}_{\mathrm{f}}\boldsymbol{v})
+   \boldsymbol{i}_{\mathrm{f}}^\ast
+= \operatorname{diag}(\mathbf{C}_{\mathrm{f}}\boldsymbol{v})
+   \mathbf{Y}_{\mathrm{f}}^\ast\boldsymbol{v}^\ast, \\
+\boldsymbol{s}_{\mathrm{t}}(\boldsymbol{v})
+&amp;= \operatorname{diag}(\mathbf{C}_{\mathrm{t}}\boldsymbol{v})
+   \boldsymbol{i}_{\mathrm{t}}^\ast
+= \operatorname{diag}(\mathbf{C}_{\mathrm{t}}\boldsymbol{v})
+   \mathbf{Y}_{\mathrm{t}}^\ast\boldsymbol{v}^\ast.
+\end{aligned}
+\]</span></p>
+<p>Here, complex conjugation is applied element-wise, so <span class="math inline">\((\mathbf{A}\boldsymbol{x})^\ast
+=\mathbf{A}^\ast\boldsymbol{x}^\ast\)</span>.</p>
+<p>The bus injection can be written as (power injection balance)</p>
+<p><span class="math display">\[
+\boldsymbol{g}_{\mathrm{AC}}(\boldsymbol{v},\boldsymbol{s}_{\mathrm{g}})
+=
+\boldsymbol{s}_{\mathrm{bus}}(\boldsymbol{v})
++ \boldsymbol{s}_{\mathrm{d}}
+- \mathbf{C}_{\mathrm{g}}\boldsymbol{s}_{\mathrm{g}}
+= \boldsymbol{0}.
+\]</span></p>
+</section>
+</section>
+<section id="dc-model" class="level2">
+<h2 class="anchored" data-anchor-id="dc-model">DC Model</h2>
+<p>The DC model makes three assumptions about the AC model:</p>
+<ol type="1">
+<li>Each voltage magnitude is fixed at 1 p.u., so <span class="math inline">\(v_i=e^{\mathrm{j}\theta_i}\)</span>.</li>
+<li>Each branch is lossless, so <span class="math inline">\(r_\ell=0\)</span>, and branch charging is ignored, so <span class="math inline">\(b_{\mathrm{c},\ell}=0\)</span>. The series admittance is therefore <span class="math inline">\(y_\ell=1/(\mathrm{j}x_\ell)\)</span>.</li>
+<li>The angle difference across each branch is small, so <span class="math inline">\(\sin(\theta_{\mathrm{f},\ell}-\theta_{\mathrm{t},\ell}-\phi_\ell)
+\approx
+\theta_{\mathrm{f},\ell}-\theta_{\mathrm{t},\ell}-\phi_\ell\)</span>.</li>
+</ol>
+<p>Under the lossless and zero-charging assumptions, the branch admittance matrix in Equation 1 becomes</p>
+<p><span class="math display">\[
+\mathbf{Y}_{\mathrm{br},\ell}
+\approx
+\frac{1}{\mathrm{j}x_\ell}
+\begin{bmatrix}
+\dfrac{1}{\tau_\ell^2}
+&amp;
+-\dfrac{1}{\tau_\ell e^{-\mathrm{j}\phi_\ell}}
+\\
+-\dfrac{1}{\tau_\ell e^{\mathrm{j}\phi_\ell}}
+&amp;
+1
+\end{bmatrix}
+\]</span></p>
+<p>Define the DC branch coefficient</p>
+<p><span class="math display">\[
+\beta_\ell=\frac{1}{x_\ell\tau_\ell},
+\]</span></p>
+<p>and collect these coefficients into <span class="math inline">\(\boldsymbol{\beta}=[\beta_\ell]_{\ell\in\mathcal{L}}\)</span> and <span class="math inline">\(\mathbf{D}_{\beta}=\operatorname{diag}(\boldsymbol{\beta})\)</span>. The direct phase-shift injection at the from end of branch <span class="math inline">\(\ell\)</span> is</p>
+<p><span class="math display">\[
+p_{\mathrm{f},\ell}^{\mathrm{shift}}
+=
+-\beta_\ell\phi_\ell.
+\]</span></p>
+<p>Collecting these branch terms gives <span class="math inline">\(\boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}\)</span>. The corresponding bus injections are</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{bus}}^{\mathrm{shift}}
+=
+\mathbf{A}^{\top}\boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}.
+\]</span></p>
+<p>The bus active-power injection equation is</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{bus}}
+=
+\mathbf{B}_{\mathrm{bus}}\boldsymbol{\theta}
++ \boldsymbol{p}_{\mathrm{bus}}^{\mathrm{shift}}.
+\]</span></p>
+<p>The branch active-power-flow equation is</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{f}}
+=
+\mathbf{B}_{\mathrm{f}}\boldsymbol{\theta}
++ \boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}
+=
+-\boldsymbol{p}_{\mathrm{t}}.
+\]</span></p>
+<p>The DC-model system matrices can be written as</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{B}_{\mathrm{f}}
+&amp;= \mathbf{D}_{\beta}\mathbf{A}, \\
+\mathbf{B}_{\mathrm{bus}}
+&amp;= \mathbf{A}^{\top}\mathbf{B}_{\mathrm{f}}
+= \mathbf{A}^{\top}\mathbf{D}_{\beta}\mathbf{A}.
+\end{aligned}
+\]</span></p>
+<p>At unit voltage magnitude, define the active-power consumption of bus shunts as <span class="math inline">\(\boldsymbol{p}_{\mathrm{sh}}=\boldsymbol{g}_{\mathrm{sh}}\)</span> in per unit. The bus active-power balance is</p>
+<p><span class="math display">\[
+\boldsymbol{g}_{\mathrm{DC}}
+(\boldsymbol{\theta},\boldsymbol{p}_{\mathrm{g}})
+=
+\mathbf{B}_{\mathrm{bus}}\boldsymbol{\theta}
++ \boldsymbol{p}_{\mathrm{bus}}^{\mathrm{shift}}
++ \boldsymbol{p}_{\mathrm{d}}
++ \boldsymbol{p}_{\mathrm{sh}}
+- \mathbf{C}_{\mathrm{g}}\boldsymbol{p}_{\mathrm{g}}
+= \boldsymbol{0}.
+\]</span></p>
+<section id="ptdf-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="ptdf-matrix">PTDF Matrix</h3>
+<p>The power transfer distribution factor (PTDF) matrix is the linear mapping from <strong>balanced bus active-power injections</strong> to branch active-power flows under the DC model. Let</p>
+<p><span class="math display">\[
+\mathbf{H}
+\in
+\mathbb{R}^{n_{\mathrm{br}}\times n_{\mathrm{bus}}}
+\]</span></p>
+<p>denote the PTDF matrix, where <span class="math inline">\(n_{\mathrm{br}}\)</span> and <span class="math inline">\(n_{\mathrm{bus}}\)</span> are the numbers of branches and buses, respectively. Ignoring phase-shift terms temporarily, the mapping is</p>
+<p><span class="math display">\[
+\Delta\boldsymbol{p}_{\mathrm{f}}
+=
+\mathbf{H}\Delta\boldsymbol{p}_{\mathrm{bus}}.
+\]</span></p>
+<section id="derivation" class="level4">
+<h4 class="anchored" data-anchor-id="derivation">Derivation</h4>
+<p>The DC network equations are</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{p}_{\mathrm{bus}}
+&amp;= \mathbf{B}_{\mathrm{bus}}\boldsymbol{\theta}
++ \boldsymbol{p}_{\mathrm{bus}}^{\mathrm{shift}}, \\
+\boldsymbol{p}_{\mathrm{f}}
+&amp;= \mathbf{B}_{\mathrm{f}}\boldsymbol{\theta}
++ \boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}.
+\end{aligned}
+\]</span></p>
+<p>The matrix <span class="math inline">\(\mathbf{B}_{\mathrm{bus}}\)</span> is singular because adding the same constant to every bus angle does not change any branch angle difference. Select one bus <span class="math inline">\(s\)</span> as the angle reference and set</p>
+<p><span class="math display">\[
+\theta_s = 0.
+\]</span></p>
+<p>Let <span class="math inline">\(\mathcal{N}=\mathcal{B}\setminus\{s\}\)</span> denote the non-reference buses. Define the reduced nodal matrix and the corresponding columns of <span class="math inline">\(\mathbf{B}_{\mathrm{f}}\)</span> as</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{B}_{\mathrm{red}}
+&amp;:=
+(\mathbf{B}_{\mathrm{bus}})_{\mathcal{N},\mathcal{N}}, \\
+\mathbf{B}_{\mathrm{f},\mathcal{N}}
+&amp;:=
+(\mathbf{B}_{\mathrm{f}})_{:,\mathcal{N}}.
+\end{aligned}
+\]</span></p>
+<p>For a connected network, <span class="math inline">\(\mathbf{B}_{\mathrm{red}}\)</span> is normally nonsingular. Without phase-shift terms,</p>
+<p><span class="math display">\[
+\boldsymbol{\theta}_{\mathcal{N}}
+=
+\mathbf{B}_{\mathrm{red}}^{-1}
+\boldsymbol{p}_{\mathrm{bus},\mathcal{N}}.
+\]</span></p>
+<p>Substituting this result into the branch-flow equation gives</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{f}}
+=
+\mathbf{B}_{\mathrm{f},\mathcal{N}}
+\mathbf{B}_{\mathrm{red}}^{-1}
+\boldsymbol{p}_{\mathrm{bus},\mathcal{N}}.
+\]</span></p>
+<p>Let <span class="math inline">\(\mathbf{H}_{\mathcal{N}}:=(\mathbf{H})_{:,\mathcal{N}}\)</span> denote the non-slack columns of the PTDF matrix. Consequently, the single-slack PTDF matrix is defined by</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{H}_{\mathcal{N}}
+&amp;=
+\mathbf{B}_{\mathrm{f},\mathcal{N}}
+\mathbf{B}_{\mathrm{red}}^{-1}, \\
+\boldsymbol{h}_s &amp;= \boldsymbol{0},
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\boldsymbol{h}_s\)</span> is the PTDF column associated with the slack bus.</p>
+</section>
+<section id="direct-dc-power-flow-calculation" class="level4">
+<h4 class="anchored" data-anchor-id="direct-dc-power-flow-calculation">Direct DC Power-Flow Calculation</h4>
+<p>PTDF can be used to calculate DC branch flows directly, without first computing bus angles:</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{f}}
+=
+\mathbf{H}\boldsymbol{p}_{\mathrm{bus}}.
+\]</span></p>
+<p>This is not a different model from DC power flow. It is the same linear system after the bus-angle variables have been eliminated. The input should be a net bus-injection vector satisfying</p>
+<p><span class="math display">\[
+\mathbf{1}^{\top}\boldsymbol{p}_{\mathrm{bus}}=0,
+\]</span></p>
+<p>with entries in bus order. The result is in branch order and follows each branch’s defined from-to orientation.</p>
+<blockquote class="blockquote">
+<p>Therefore, the above two equations are usually solved together, such as in DC OPF.</p>
+</blockquote>
+<p>In the standard linear DC model, phase-shift angles also do not change the sensitivity matrix <span class="math inline">\(\mathbf{H}\)</span>; instead, they introduce an affine flow offset.</p>
+</section>
+<section id="phase-shifters-and-the-flow-offset" class="level4">
+<h4 class="anchored" data-anchor-id="phase-shifters-and-the-flow-offset">Phase Shifters and the Flow Offset</h4>
+<p>When phase-shifting transformers are present, <span class="math inline">\(\boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}\)</span> is the direct phase-shift term in the angle-based branch equation. It is not, by itself, the final branch flow produced by the phase shifter, because bus angles must also adjust to maintain nodal power balance.</p>
+<p>Eliminating the angles while retaining the shift terms gives</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{f}}
+=
+\mathbf{H}\boldsymbol{p}_{\mathrm{bus}}
++
+\left(
+\boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}
+-
+\mathbf{H}\boldsymbol{p}_{\mathrm{bus}}^{\mathrm{shift}}
+\right).
+\]</span></p>
+<p>Therefore, in per-unit quantities,</p>
+<p><span class="math display">\[
+\boldsymbol{p}_{\mathrm{f}}^{\mathrm{offset}}
+=
+\boldsymbol{p}_{\mathrm{f}}^{\mathrm{shift}}
+-
+\mathbf{H}\boldsymbol{p}_{\mathrm{bus}}^{\mathrm{shift}}.
+\]</span></p>
+<p>The second term is the fixed flow offset. GridForge stores it in MW as <code>branch_flow_offset_mw</code>; the two direct shift terms are exposed in p.u. as <code>branch_shift_injection_pu</code> and <code>bus_shift_injection_pu</code>.</p>
+<blockquote class="blockquote">
+<p>The matrix definitions and phase-shift signs above follow MATPOWER’s <a href="https://matpower.org/documentation/ref-manual/legacy/functions/makeBdc.html"><code>makeBdc</code></a> and <a href="https://matpower.org/documentation/ref-manual/legacy/functions/makePTDF.html"><code>makePTDF</code></a> conventions.</p>
+</blockquote>
+</section>
+</section>
+</section>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/xuwkk\.github\.io\/wangkun_xu\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Wangkun Xu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

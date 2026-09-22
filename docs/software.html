@@ -9,7 +9,7 @@
 <meta name="author" content="Dr Wangkun Xu">
 <meta name="description" content="Academic website of Dr Wangkun Xu">
 
-<title>Wangkun Xu</title>
+<title>Software – Wangkun Xu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-selected-publications .list');
+    const listingTargetEl = window.document.querySelector('#listing-scientific-packages .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-authors-html','listing-corresponding-author','listing-venue','listing-year','listing-group','listing-marker','listing-tone','listing-featured','listing-preprint','listing-codes','listing-paper','listing-code','listing-software','listing-testbed',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-year-sort'] }],
+      valueNames: ['listing-id','listing-title','listing-description','listing-context','listing-group','listing-priority','listing-featured','listing-repository','listing-documentation','listing-install','listing-application','listing-marker','listing-tone',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
       
-      searchColumns: ["listing-title","listing-authors-html","listing-corresponding-author","listing-venue","listing-year","listing-group","listing-marker","listing-tone","listing-featured","listing-preprint","listing-codes","listing-paper","listing-code","listing-software","listing-testbed"],
+      searchColumns: ["listing-id","listing-title","listing-description","listing-context","listing-group","listing-priority","listing-featured","listing-repository","listing-documentation","listing-install","listing-application","listing-marker","listing-tone"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-selected-publications'] = new List('listing-selected-publications', options);
+    window['quarto-listings']['listing-scientific-packages'] = new List('listing-scientific-packages', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -99,20 +99,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-featured-software .list');
+    const listingTargetEl = window.document.querySelector('#listing-research-code .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-id','listing-title','listing-description','listing-context','listing-group','listing-priority','listing-featured','listing-repository','listing-documentation','listing-install','listing-application','listing-marker','listing-tone','listing-paper','listing-course',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
+      valueNames: ['listing-id','listing-title','listing-description','listing-context','listing-group','listing-priority','listing-featured','listing-repository','listing-paper','listing-marker','listing-tone',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
       
-      searchColumns: ["listing-id","listing-title","listing-description","listing-context","listing-group","listing-priority","listing-featured","listing-repository","listing-documentation","listing-install","listing-application","listing-marker","listing-tone","listing-paper","listing-course"],
+      searchColumns: ["listing-id","listing-title","listing-description","listing-context","listing-group","listing-priority","listing-featured","listing-repository","listing-paper","listing-marker","listing-tone"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-featured-software'] = new List('listing-featured-software', options);
+    window['quarto-listings']['listing-research-code'] = new List('listing-research-code', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -127,20 +127,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-current-teaching .list');
+    const listingTargetEl = window.document.querySelector('#listing-academic-utilities .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-code','listing-institution','listing-level','listing-role','listing-duration','listing-years','listing-status','listing-priority','listing-details','listing-notes','listing-tutorial',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
+      valueNames: ['listing-id','listing-title','listing-description','listing-context','listing-group','listing-priority','listing-featured','listing-repository','listing-install',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
       
-      searchColumns: ["listing-title","listing-code","listing-institution","listing-level","listing-role","listing-duration","listing-years","listing-status","listing-priority","listing-details","listing-notes","listing-tutorial"],
+      searchColumns: ["listing-id","listing-title","listing-description","listing-context","listing-group","listing-priority","listing-featured","listing-repository","listing-install"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-current-teaching'] = new List('listing-current-teaching', options);
+    window['quarto-listings']['listing-academic-utilities'] = new List('listing-academic-utilities', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -155,21 +155,48 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest-news .list');
+    const listingTargetEl = window.document.querySelector('#listing-project-tools .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-category','listing-text',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      page: 25,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-date","listing-category","listing-text"],
+      valueNames: ['listing-id','listing-title','listing-description','listing-context','listing-group','listing-priority','listing-featured','listing-repository','listing-demo',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
+      
+      searchColumns: ["listing-id","listing-title","listing-description","listing-context","listing-group","listing-priority","listing-featured","listing-repository","listing-demo"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest-news'] = new List('listing-latest-news', options);
+    window['quarto-listings']['listing-project-tools'] = new List('listing-project-tools', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-teaching-tutorials .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-id','listing-title','listing-description','listing-context','listing-group','listing-priority','listing-featured','listing-repository','listing-course','listing-marker','listing-tone',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-priority-sort'] }],
+      
+      searchColumns: ["listing-id","listing-title","listing-description","listing-context","listing-group","listing-priority","listing-featured","listing-repository","listing-course","listing-marker","listing-tone"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-teaching-tutorials'] = new List('listing-teaching-tutorials', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -224,13 +251,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles/site.css">
-<meta property="og:title" content="Wangkun Xu">
-<meta property="og:description" content="Research in machine learning, optimisation, and power-system operation and control.">
-<meta property="og:image" content="https://xuwkk.github.io/wangkun_xu/images/photo.jpg">
+<meta property="og:title" content="Software – Wangkun Xu">
+<meta property="og:description" content="Scientific packages, research code, project tools, and teaching tutorials.">
 <meta property="og:site_name" content="Wangkun Xu">
 </head>
 
-<body class="nav-fixed home-page">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -248,7 +274,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -256,7 +282,7 @@ window.Quarto = {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link active" href="./software.html" aria-current="page"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
@@ -294,18 +320,35 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#scientific-packages" id="toc-scientific-packages" class="nav-link active" data-scroll-target="#scientific-packages">Scientific packages</a></li>
+  <li><a href="#research-code" id="toc-research-code" class="nav-link" data-scroll-target="#research-code">Research code</a></li>
+  <li><a href="#academic-utilities" id="toc-academic-utilities" class="nav-link" data-scroll-target="#academic-utilities">Academic utilities</a></li>
+  <li><a href="#project-tools" id="toc-project-tools" class="nav-link" data-scroll-target="#project-tools">Project tools</a></li>
+  <li><a href="#teaching-tutorials" id="toc-teaching-tutorials" class="nav-link" data-scroll-target="#teaching-tutorials">Teaching tutorials</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Wangkun Xu</h1>
+<h1 class="title">Software</h1>
+</div>
+
+<div>
+  <div class="description">
+    Scientific packages, research code, project tools, and teaching tutorials.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -317,177 +360,86 @@ window.Quarto = {
 </header>
 
 
-<div class="hero-shell">
-<div class="hero-photo">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/photo.jpg" class="img-fluid figure-img"></p>
-<figcaption>Portrait of Wangkun Xu</figcaption>
-</figure>
-</div>
-</div>
-<section id="wangkun-xu" class="level1 hero-copy">
-<h1>Wangkun Xu</h1>
-<p class="hero-role">
-Research Associate · Imperial College London
-</p>
-<p class="hero-summary">
-I develop learning and optimisation methods for efficient, robust, and secure power-system operation under high penetrations of renewable energy.
-</p>
-<div class="focus-strip" aria-label="Research areas">
-<p><span>Learning-augmented optimisation</span> <span>Decision-focused learning</span> <span>Power-system security</span> <span>System dynamics</span></p>
-</div>
-<div class="action-row">
-<p><a class="action-link primary" href="https://profiles.imperial.ac.uk/wangkun.xu18">Imperial</a> <a class="action-link" href="https://scholar.google.com/citations?user=-RuGgBoAAAAJ&amp;hl=en">Scholar</a> <a class="action-link" href="https://github.com/xuwkk">GitHub</a> <a class="action-link" href="https://orcid.org/0000-0001-9811-2673">ORCID</a> <a class="action-link" href="https://www.linkedin.com/in/wangkun-xu/">LinkedIn</a> <a class="action-link" href="about.html">About / CV</a></p>
-</div>
-</section>
-</div>
-<div class="home-grid">
-<section id="selected-publications" class="level2 home-primary">
-<h2 class="anchored" data-anchor-id="selected-publications">Selected publications</h2>
-<p class="section-intro">
-Recent work spanning learning-augmented decision-making including efficient differentiable optimization for power system decision-focused learning and constraint learning for stability-constrained power system optimizations.
-</p>
-<div id="listing-selected-publications" class="quarto-listing quarto-listing-container-custom">
-<div class="publication-list list">
+<p>This page collects all reusable scientific packages, research code, academic utilities, project tools, and open teaching tutorials.</p>
+<section id="scientific-packages" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-packages">Scientific packages</h2>
+<p>Installable and documented tools for power-system modelling, differentiable optimisation, and optimisation diagnostics.</p>
+<div id="listing-scientific-packages" class="quarto-listing quarto-listing-container-custom">
+<div class="software-grid list">
 
-  <article class="publication-card" data-index="0" data-listing-year-sort="2026">
-    <div class="pub-visual tone-gold" aria-hidden="true">
-      
-        <span>DiffAPQP</span>
-      
+  <article class="software-card" id="ncet" data-index="0" data-listing-priority-sort="1">
+    <div class="software-head">
+      <p class="software-title listing-title">NCET</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://arxiv.org/abs/2608.04189">Structured Differentiable Optimization for Efficient Decision-focused Learning in Power Systems</a>
-          
-        </p>
-        <span class="pub-year listing-year">2026</span>
-      </div>
+    <p class="software-description listing-description">NCET (Neural-network Constraint Embedding Toolkit) converts supported PyTorch neural networks into exact mixed-integer linear constraints compiled by CVXPY.</p>
+    
+      <div class="software-meta">Neural stability surrogates · Stability-constrained optimization</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/NCET">GitHub</a>
+      <a class="software-action" href="https://xuwkk.github.io/NCET/">Documentation</a>
+      <a class="software-action" href="https://pypi.org/project/ncet/">Install</a>
+      <a class="software-action" href="https://github.com/xuwkk/Neural-SmallSignal-UC-Tutorial">Application</a>
       
-      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong> and Fei Teng</p>
       
-      <p class="pub-venue listing-venue">arXiv preprint arXiv:2608.04189</p>
       
-      <div class="pub-actions">
-        
-        <a class="pub-action" href="https://arxiv.org/abs/2608.04189">Preprint</a>
-        
-          
-            <a class="pub-action" href="https://github.com/xuwkk/diffapqp_power_systems">Code · Power systems</a>
-          
-            <a class="pub-action" href="https://github.com/xuwkk/diffapqp">Code · DiffAPQP</a>
-          
-        
-        
-        
-        
-        
-      </div>
     </div>
   </article>
 
-  <article class="publication-card" data-index="1" data-listing-year-sort="2026">
-    <div class="pub-visual tone-gold" aria-hidden="true">
-      
-        <span>ICNN</span>
-      
+  <article class="software-card" id="diffapqp" data-index="1" data-listing-priority-sort="2">
+    <div class="software-head">
+      <p class="software-title listing-title">DiffAPQP</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://ieeexplore.ieee.org/abstract/document/11593421/">Input Convex Neural Network as a Surrogate in Stability-Constrained Optimization for IBR-Dominated Power Systems</a>
-          
-        </p>
-        <span class="pub-year listing-year">2026</span>
-      </div>
+    <p class="software-description listing-description">Differentiable PyTorch layers for affine-parametric quadratic and linear programs expressed directly in CVXPY.</p>
+    
+      <div class="software-meta">Differentiable optimisation · Decision-focused learning</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/diffapqp">GitHub</a>
+      <a class="software-action" href="https://xuwkk.github.io/diffapqp/">Documentation</a>
+      <a class="software-action" href="https://pypi.org/project/diffapqp/">Install</a>
+      <a class="software-action" href="https://github.com/xuwkk/diffapqp_power_systems">Application</a>
       
-      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Hongyang Jia, Yi Wang, Ning Zhang, and Fei Teng</p>
       
-      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
       
-      <div class="pub-actions">
-        <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/11593421/">Paper</a>
-        <a class="pub-action" href="https://arxiv.org/abs/2606.26446">Preprint</a>
-        
-          <a class="pub-action" href="https://github.com/xuwkk/icnn_constraint_learning">Code</a>
-        
-        
-        
-        
-        
-      </div>
     </div>
   </article>
 
-  <article class="publication-card" data-index="2" data-listing-year-sort="2026">
-    <div class="pub-visual tone-navy" aria-hidden="true">
-      
-        <span>FLOW-PCE</span>
-      
+  <article class="software-card" id="gridforge" data-index="2" data-listing-priority-sort="3">
+    <div class="software-head">
+      <p class="software-title listing-title">GridForge</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://arxiv.org/abs/2603.20472">Flow-based Polynomial Chaos Expansion for Uncertainty Quantification in Power System Dynamic Simulation</a>
-          
-        </p>
-        <span class="pub-year listing-year">2026</span>
-      </div>
+    <p class="software-description listing-description">Build optimisation-ready power-system cases with profile dataset from PYPOWER or MATPOWER grids, YAML configurations, and bus-level time-series data.</p>
+    
+      <div class="software-meta">Power-system testbeds · Data pipelines · CVXPY</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/gridforge">GitHub</a>
+      <a class="software-action" href="https://xuwkk.github.io/gridforge/">Documentation</a>
+      <a class="software-action" href="https://pypi.org/project/powergridforge/">Install</a>
       
-      <p class="pub-authors listing-authors">Le Fang, <strong>Wangkun Xu</strong><sup class="pub-corresponding-marker" title="Corresponding author" aria-label=" corresponding author">*</sup>, and Fei Teng</p>
       
-        <p class="pub-corresponding">* Corresponding author</p>
       
-      <p class="pub-venue listing-venue">arXiv preprint arXiv:2603.20472</p>
       
-      <div class="pub-actions">
-        
-        <a class="pub-action" href="https://arxiv.org/abs/2603.20472">Preprint</a>
-        
-        
-        
-        
-        
-      </div>
     </div>
   </article>
 
-  <article class="publication-card" data-index="3" data-listing-year-sort="2026">
-    <div class="pub-visual tone-gold" aria-hidden="true">
-      
-        <span>LAPSO</span>
-      
+  <article class="software-card" id="cvxpy-summary" data-index="3" data-listing-priority-sort="4">
+    <div class="software-head">
+      <p class="software-title listing-title">CVXPY Summary</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://ieeexplore.ieee.org/abstract/document/11663065">Learning-Augmented Power System Operations: A Unified Optimization View</a>
-          
-        </p>
-        <span class="pub-year listing-year">2026</span>
-      </div>
+    <p class="software-description listing-description">Inspect and debug CVXPY models through compact summaries of variables, constraints, parameters, compliance, and solver statistics.</p>
+    
+      <div class="software-meta">Optimisation diagnostics · Model inspection</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/cvxpy_summary">GitHub</a>
       
-      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Zhongda Chu, and Fei Teng</p>
+      <a class="software-action" href="https://pypi.org/project/cvxpy-summary/">Install</a>
       
-      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
       
-      <div class="pub-actions">
-        <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/11663065">Paper</a>
-        <a class="pub-action" href="https://arxiv.org/abs/2505.05203">Preprint</a>
-        
-          <a class="pub-action" href="https://github.com/xuwkk/lapso_exp">Code</a>
-        
-        
-        
-        
-        <a class="pub-action" href="software.html#lapso">Software</a>
-      </div>
+      
+      
     </div>
   </article>
 
@@ -496,250 +448,200 @@ Recent work spanning learning-augmented decision-making including efficient diff
 No matching items
 </div>
 </div>
-<p class="section-link">
-<a href="./research.html">View all publications →</a>
-</p>
 </section>
-<section id="latest-news" class="level2 home-aside">
-<h2 class="anchored" data-anchor-id="latest-news">Latest news</h2>
-<div id="listing-latest-news" class="quarto-listing quarto-listing-container-custom">
-<div class="news-list list">
+<section id="research-code" class="level2">
+<h2 class="anchored" data-anchor-id="research-code">Research code</h2>
+<p>Implementations connected to publications in learning-augmented optimisation, decision-focused learning, stability, cybersecurity, and multi-agent control.</p>
+<div id="listing-research-code" class="quarto-listing quarto-listing-container-custom">
+<div class="software-grid list">
 
-  <article class="news-item" data-index="0" data-listing-date-sort="1788303600000">
-    <div class="news-meta">
-      <time class="news-date listing-date" datetime="2026-09-02">2026-09-02</time>
-      <span class="news-category listing-category">Teaching</span>
+  <article class="software-card" id="diffapqp-power-systems" data-index="0" data-listing-priority-sort="1">
+    <div class="software-head">
+      <p class="software-title listing-title">DiffAPQP power-system experiments</p>
     </div>
-    <p class="news-copy listing-title">Delivered the guest lecture <em>An Open-Source Toolbox for Embedding Neural Stability Surrogates in Stability-Constrained Optimization</em> at the University of Strathclyde, Glasgow. <a href="teaching/ibr-summer-school-2026.html">Course details</a>.</p>
-  </article>
-
-  <article class="news-item" data-index="1" data-listing-date-sort="1788303600000">
-    <div class="news-meta">
-      <time class="news-date listing-date" datetime="2026-09-02">2026-09-02</time>
-      <span class="news-category listing-category">Software</span>
-    </div>
-    <p class="news-copy listing-title">Open-sourced NCET, a toolbox for embedding neural stability surrogates in stability-constrained optimization. <a href="https://github.com/xuwkk/NCET">NCET package</a>.</p>
-  </article>
-
-  <article class="news-item" data-index="2" data-listing-date-sort="1788303600000">
-    <div class="news-meta">
-      <time class="news-date listing-date" datetime="2026-09-02">2026-09-02</time>
-      <span class="news-category listing-category">Paper</span>
-    </div>
-    <p class="news-copy listing-title"><a href="https://ieeexplore.ieee.org/abstract/document/11663065">Paper</a> · <a href="https://arxiv.org/abs/2505.05203">Preprint</a>.</p>
-  </article>
-
-  <article class="news-item" data-index="3" data-listing-date-sort="1787871600000">
-    <div class="news-meta">
-      <time class="news-date listing-date" datetime="2026-08-28">2026-08-28</time>
-      <span class="news-category listing-category">Event</span>
-    </div>
-    <p class="news-copy listing-title">Presented <em>Input Convex Neural Network as a Surrogate in Stability-Constrained Optimization for IBR-dominated Power Systems</em>.</p>
-  </article>
-
-  <article class="news-item" data-index="4" data-listing-date-sort="1786057200000">
-    <div class="news-meta">
-      <time class="news-date listing-date" datetime="2026-08-07">2026-08-07</time>
-      <span class="news-category listing-category">Event</span>
-    </div>
-    <p class="news-copy listing-title">Presented <em>Structured Differentiable Optimization for Efficient Decision-Focused Learning in Power Systems</em> at the EPICS Bimonthly Meeting, covering theory, software, and IEEE 118-bus evidence. <a href="material/research/20260806-diffapqp_presentation.pdf">Slides</a>.</p>
-  </article>
-
-  <article class="news-item" data-index="5" data-listing-date-sort="1785538800000">
-    <div class="news-meta">
-      <time class="news-date listing-date" datetime="2026-08-01">2026-08-01</time>
-      <span class="news-category listing-category">Paper</span>
-    </div>
-    <p class="news-copy listing-title"><a href="https://ieeexplore.ieee.org/abstract/document/11593421">Paper</a> · <a href="https://arxiv.org/abs/2606.26446">Preprint</a>.</p>
-  </article>
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<p class="section-link">
-<a href="./news.html">All news →</a>
-</p>
-</section>
-</div>
-<section id="featured-software" class="level2 home-section">
-<h2 class="anchored" data-anchor-id="featured-software">Featured software</h2>
-<p class="section-intro">
-Reusable scientific packages, research implementations, and open teaching resources.
-</p>
-<div id="listing-featured-software" class="quarto-listing quarto-listing-container-custom">
-<div class="publication-list featured-software-list list">
-
-  
-  
-  
-  <article class="publication-card software-feature-card" data-index="0" data-listing-priority-sort="1">
-    <div class="pub-visual tone-teal" aria-hidden="true">
-      <span>NCET</span>
-    </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://xuwkk.github.io/NCET/">NCET</a>
-          
-        </p>
-      </div>
-      <p class="pub-authors listing-description">NCET (Neural-network Constraint Embedding Toolkit) converts supported PyTorch neural networks into exact mixed-integer linear constraints compiled by CVXPY.</p>
+    <p class="software-description listing-description">Reproducible IEEE 118-bus experiments comparing DiffAPQP and CvxpyLayers for closed-loop and counterfactual decision-focused learning with economic dispatch and redispatch.</p>
+    
+      <div class="software-meta">Decision-focused learning · Economic dispatch · IEEE 118-bus</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/diffapqp_power_systems">GitHub</a>
       
-        <p class="software-feature-context">Neural stability surrogates · Stability-constrained optimization</p>
       
-      <div class="pub-actions">
-        <a class="pub-action" href="https://github.com/xuwkk/NCET">GitHub</a>
-        <a class="pub-action" href="https://xuwkk.github.io/NCET/">Documentation</a>
-        <a class="pub-action" href="https://pypi.org/project/ncet/">Install</a>
-        <a class="pub-action" href="https://github.com/xuwkk/Neural-SmallSignal-UC-Tutorial">Application</a>
-        
-        
-        
-      </div>
+      
+      
+      <a class="software-action" href="https://arxiv.org/abs/2608.04189">Related paper</a>
+      
     </div>
   </article>
 
-  
-  
-  
-  <article class="publication-card software-feature-card" data-index="1" data-listing-priority-sort="2">
-    <div class="pub-visual tone-gold" aria-hidden="true">
-      <span>APQP</span>
+  <article class="software-card" id="icnn-constraint-learning" data-index="1" data-listing-priority-sort="2">
+    <div class="software-head">
+      <p class="software-title listing-title">ICNN constraint learning</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://xuwkk.github.io/diffapqp/">DiffAPQP</a>
-          
-        </p>
-      </div>
-      <p class="pub-authors listing-description">Differentiable PyTorch layers for affine-parametric quadratic and linear programs expressed directly in CVXPY.</p>
+    <p class="software-description listing-description">Input-convex neural-network surrogates for small-signal stability constraints in unit commitment on IEEE 14- and 118-bus systems.</p>
+    
+      <div class="software-meta">Stability-constrained optimisation · IBR-dominated systems</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/icnn_constraint_learning">GitHub</a>
       
-        <p class="software-feature-context">Differentiable optimisation · Decision-focused learning</p>
       
-      <div class="pub-actions">
-        <a class="pub-action" href="https://github.com/xuwkk/diffapqp">GitHub</a>
-        <a class="pub-action" href="https://xuwkk.github.io/diffapqp/">Documentation</a>
-        <a class="pub-action" href="https://pypi.org/project/diffapqp/">Install</a>
-        <a class="pub-action" href="https://github.com/xuwkk/diffapqp_power_systems">Application</a>
-        
-        
-        
-      </div>
+      
+      
+      <a class="software-action" href="https://ieeexplore.ieee.org/abstract/document/11593421/">Related paper</a>
+      
     </div>
   </article>
 
-  
-  
-  
-  <article class="publication-card software-feature-card" data-index="2" data-listing-priority-sort="3">
-    <div class="pub-visual tone-teal" aria-hidden="true">
-      <span>GRID</span>
+  <article class="software-card" id="lapso" data-index="2" data-listing-priority-sort="3">
+    <div class="software-head">
+      <p class="software-title listing-title">LAPSO experimental framework</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://xuwkk.github.io/gridforge/">GridForge</a>
-          
-        </p>
-      </div>
-      <p class="pub-authors listing-description">Build optimisation-ready power-system cases with profile dataset from PYPOWER or MATPOWER grids, YAML configurations, and bus-level time-series data.</p>
+    <p class="software-description listing-description">Experiments for studying learning-augmented power-system operations through a unified optimisation view.</p>
+    
+      <div class="software-meta">Learning-augmented optimisation · Paper-linked</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/lapso_exp">GitHub</a>
       
-        <p class="software-feature-context">Power-system testbeds · Data pipelines · CVXPY</p>
       
-      <div class="pub-actions">
-        <a class="pub-action" href="https://github.com/xuwkk/gridforge">GitHub</a>
-        <a class="pub-action" href="https://xuwkk.github.io/gridforge/">Documentation</a>
-        <a class="pub-action" href="https://pypi.org/project/powergridforge/">Install</a>
-        
-        
-        
-        
-      </div>
+      
+      
+      <a class="software-action" href="https://arxiv.org/abs/2505.05203">Related paper</a>
+      
     </div>
   </article>
 
-  
-  
-  
-  <article class="publication-card software-feature-card" data-index="3" data-listing-priority-sort="4">
-    <div class="pub-visual tone-red" aria-hidden="true">
-      <span>ML</span>
+  <article class="software-card" id="task-aware-unlearning" data-index="3" data-listing-priority-sort="5">
+    <div class="software-head">
+      <p class="software-title listing-title">Task-aware machine unlearning</p>
     </div>
-    <div class="pub-body">
-      <div class="pub-topline">
-        <p class="pub-title listing-title">
-          
-            <a href="https://github.com/xuwkk/intro2ml-coding-tutorial">Introduction to ML coding tutorial</a>
-          
-        </p>
-      </div>
-      <p class="pub-authors listing-description">Hands-on examples covering SVMs, PCA, k-means, and zero-shot energy-price forecasting with Amazon Chronos.</p>
+    <p class="software-description listing-description">Implementation accompanying task-aware machine unlearning for load forecasting and downstream decision quality.</p>
+    
+      <div class="software-meta">Machine unlearning · Load forecasting</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/task_aware_machine_unlearning">GitHub</a>
       
-        <p class="software-feature-context">Python tutorial · MSc teaching</p>
       
-      <div class="pub-actions">
-        <a class="pub-action" href="https://github.com/xuwkk/intro2ml-coding-tutorial">GitHub</a>
-        
-        
-        
-        
-        
-        <a class="pub-action" href="teaching/ml-energy-systems.html">Related course</a>
-      </div>
+      
+      
+      <a class="software-action" href="https://ieeexplore.ieee.org/abstract/document/10472091">Related paper</a>
+      
     </div>
   </article>
 
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<p class="section-link">
-<a href="./software.html">Explore all software →</a>
-</p>
-</section>
-<section id="current-teaching" class="level2 home-section">
-<h2 class="anchored" data-anchor-id="current-teaching">Current teaching</h2>
-<div id="listing-current-teaching" class="quarto-listing quarto-listing-container-custom">
-<div class="course-list list">
-
-  <article class="course-card" data-index="0" data-listing-priority-sort="1">
-    <div>
-      <p class="course-code listing-code">ELEC97077 · Smart Grid Technology</p>
-      <p class="course-title listing-title"><a href="teaching/ml4ps.html">Machine Learning and Data Science for Power Systems</a></p>
-      <p class="course-meta">MSc Future Power Networks · Department of Electrical and Electronic Engineering, Imperial College London</p>
-      <p class="course-role">Guest Lecturer · Lecturing, coursework, demonstrations, tutorials, and marking · 5 hours of lectures + 1-hour tutorial</p>
+  <article class="software-card" id="e2e-at" data-index="4" data-listing-priority-sort="6">
+    <div class="software-head">
+      <p class="software-title listing-title">E2E-AT</p>
     </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2024–2026</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/ml4ps.html">Details</a>
-        <a class="course-action" href="material/teaching/elec97077/ELEC97077_ML4PS_LectureNote_2526.pdf">Notes</a>
-        
-      </div>
+    <p class="software-description listing-description">Code for the task-aware end-to-end learning framework designed to tackle uncertainty in downstream decisions.</p>
+    
+      <div class="software-meta">Decision-focused learning · Uncertainty</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/E2E-AT">GitHub</a>
+      
+      
+      
+      
+      <a class="software-action" href="https://arxiv.org/abs/2312.10587">Related paper</a>
+      
     </div>
   </article>
 
-  <article class="course-card" data-index="1" data-listing-priority-sort="2">
-    <div>
-      <p class="course-code listing-code">MECH70039 · Data Science and Digitalisation</p>
-      <p class="course-title listing-title"><a href="teaching/ml-energy-systems.html">Introduction to Machine Learning for Energy Systems</a></p>
-      <p class="course-meta">MSc Sustainable Energy Futures · Energy Futures Lab, Imperial College London</p>
-      <p class="course-role">Guest Lecturer · Lecture and hands-on tutorial · 2-hour lecture + 2-hour tutorial</p>
+  <article class="software-card" id="frequency-sampling" data-index="5" data-listing-priority-sort="7">
+    <div class="software-head">
+      <p class="software-title listing-title">Frequency stability sampling with forward-mode AD</p>
     </div>
-    <div class="course-side">
-      <p class="course-years listing-years">2025–2026</p>
-      <div class="course-actions">
-        <a class="course-action" href="teaching/ml-energy-systems.html">Details</a>
-        <a class="course-action" href="material/teaching/mech70039/MECH70039_Intro2ML_2526.pdf">Notes</a>
-        <a class="course-action" href="https://github.com/xuwkk/intro2ml-coding-tutorial">Tutorial</a>
-      </div>
+    <p class="software-description listing-description">Efficient sampling tools for learning frequency-stability constraints using forward-mode automatic differentiation.</p>
+    
+      <div class="software-meta">Stability constraints · Automatic differentiation</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/frequency_sample_ad">GitHub</a>
+      
+      
+      
+      
+      <a class="software-action" href="https://arxiv.org/abs/2407.15045">Related paper</a>
+      
+    </div>
+  </article>
+
+  <article class="software-card" id="ddet-mtd" data-index="6" data-listing-priority-sort="8">
+    <div class="software-head">
+      <p class="software-title listing-title">DDET-MTD</p>
+    </div>
+    <p class="software-description listing-description">Implementation of event-triggered moving target defence that blends grid data and physical models.</p>
+    
+      <div class="software-meta">Power-grid cybersecurity · Moving target defence</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/DDET-MTD">GitHub</a>
+      
+      
+      
+      
+      <a class="software-action" href="https://ieeexplore.ieee.org/abstract/document/9998121">Related paper</a>
+      
+    </div>
+  </article>
+
+  <article class="software-card" id="robust-mtd" data-index="7" data-listing-priority-sort="9">
+    <div class="software-head">
+      <p class="software-title listing-title">Robust MTD</p>
+    </div>
+    <p class="software-description listing-description">Code accompanying robust moving target defence against false-data injection attacks in power grids.</p>
+    
+      <div class="software-meta">Robust control · Power-grid cybersecurity</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/Robust_MTD">GitHub</a>
+      
+      
+      
+      
+      <a class="software-action" href="https://ieeexplore.ieee.org/document/9905637">Related paper</a>
+      
+    </div>
+  </article>
+
+  <article class="software-card" id="mapdn" data-index="8" data-listing-priority-sort="10">
+    <div class="software-head">
+      <p class="software-title listing-title">MAPDN</p>
+    </div>
+    <p class="software-description listing-description">Multi-agent reinforcement-learning environment and methods for active voltage control on power distribution networks.</p>
+    
+      <div class="software-meta">Multi-agent RL · Distribution networks</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/Future-Power-Networks/MAPDN">GitHub</a>
+      
+      
+      
+      
+      <a class="software-action" href="https://arxiv.org/abs/2110.14300">Related paper</a>
+      
+    </div>
+  </article>
+
+  <article class="software-card" id="visual-power-grid" data-index="9" data-listing-priority-sort="11">
+    <div class="software-head">
+      <p class="software-title listing-title">Visual Power Grid</p>
+    </div>
+    <p class="software-description listing-description">Interactive Python visualisation of optimal power flow, state estimation, false-data injection attacks, and moving-target defence.</p>
+    
+      <div class="software-meta">Power-system cybersecurity · Interactive simulation</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/Visual-Power-Grid">GitHub</a>
+      
+      
+      
+      
+      <a class="software-action" href="https://ieeexplore.ieee.org/document/9905637">Related paper</a>
+      
     </div>
   </article>
 
@@ -748,13 +650,122 @@ No matching items
 No matching items
 </div>
 </div>
-<p class="section-link">
-<a href="./teaching.html">Teaching and course materials →</a>
-</p>
 </section>
+<section id="academic-utilities" class="level2">
+<h2 class="anchored" data-anchor-id="academic-utilities">Academic utilities</h2>
+<p>Small packages that make computational research and project planning easier.</p>
+<div id="listing-academic-utilities" class="quarto-listing quarto-listing-container-custom">
+<div class="software-grid list">
+
+  <article class="software-card" id="finalert" data-index="0" data-listing-priority-sort="5">
+    <div class="software-head">
+      <p class="software-title listing-title">Finalert</p>
+    </div>
+    <p class="software-description listing-description">Send progress, completion, and failure notifications for long-running Python jobs through messaging, email, or webhooks.</p>
+    
+      <div class="software-meta">Experiment monitoring · Python workflows</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/finalert">GitHub</a>
+      
+      <a class="software-action" href="https://pypi.org/project/finalert/">Install</a>
+      
+      
+      
+      
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="project-tools" class="level2">
+<h2 class="anchored" data-anchor-id="project-tools">Project tools</h2>
+<p>Standalone interactive tools and explorers developed alongside research and teaching projects.</p>
+<div id="listing-project-tools" class="quarto-listing quarto-listing-container-custom">
+<div class="software-grid list">
+
+  <article class="software-card" id="edge-ai-explorer" data-index="0" data-listing-priority-sort="1">
+    <div class="software-head">
+      <p class="software-title listing-title">Edge AI Inference Explorer</p>
+    </div>
+    <p class="software-description listing-description">Browser-based explorer for reasoning about uncertainty in end-user edge-AI inference. This is part of the DESNZ project EdgeAI at Inference</p>
+    
+      <div class="software-meta">Edge AI · Uncertainty · Interactive learning</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/EdgeAI-Inference-Explorer">GitHub</a>
+      
+      
+      
+      <a class="software-action" href="https://xuwkk.github.io/EdgeAI-Inference-Explorer/">Live demo</a>
+      
+      
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="teaching-tutorials" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-tutorials">Teaching tutorials</h2>
+<p>Open coding tutorials and exercises designed for hands-on learning.</p>
+<div id="listing-teaching-tutorials" class="quarto-listing quarto-listing-container-custom">
+<div class="software-grid list">
+
+  <article class="software-card" id="neural-smallsignal-uc-tutorial" data-index="0" data-listing-priority-sort="1">
+    <div class="software-head">
+      <p class="software-title listing-title">Small-signal stability-constrained unit commitment tutorial</p>
+    </div>
+    <p class="software-description listing-description">Hands-on workflow for learning a small-signal stability surrogate and embedding it as mixed-integer constraints in a one-period unit commitment problem.</p>
+    
+      <div class="software-meta">3rd IBR summer school · Neural stability surrogates</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/Neural-SmallSignal-UC-Tutorial">GitHub</a>
+      
+      
+      
+      
+      
+      <a class="software-action" href="teaching/ibr-summer-school-2026.html">Related course</a>
+    </div>
+  </article>
+
+  <article class="software-card" id="intro2ml-tutorial" data-index="1" data-listing-priority-sort="4">
+    <div class="software-head">
+      <p class="software-title listing-title">Introduction to ML coding tutorial</p>
+    </div>
+    <p class="software-description listing-description">Hands-on examples covering SVMs, PCA, k-means, and zero-shot energy-price forecasting with Amazon Chronos.</p>
+    
+      <div class="software-meta">Python tutorial · MSc teaching</div>
+    
+    <div class="software-actions">
+      <a class="software-action" href="https://github.com/xuwkk/intro2ml-coding-tutorial">GitHub</a>
+      
+      
+      
+      
+      
+      <a class="software-action" href="teaching/ml-energy-systems.html">Related course</a>
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

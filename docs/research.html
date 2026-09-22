@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dr.&nbsp;Wangkun Xu">
-<meta name="description" content="Dr.&nbsp;Wangkun Xu’s Academic Website">
+<meta name="author" content="Dr Wangkun Xu">
+<meta name="description" content="Academic website of Dr Wangkun Xu">
 
-<title>Research – Wangkun Xu Homepage</title>
+<title>Research – Wangkun Xu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4412607aa6b8aa0fd61536c99a29c053.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-de02b4b42a964af47b078c552af716e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b7f71073174c40cd8ab8dae1e37c9972.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +68,147 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-sequential-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-authors-html','listing-corresponding-author','listing-venue','listing-year','listing-group','listing-marker','listing-tone','listing-featured','listing-preprint','listing-codes','listing-paper','listing-code','listing-software',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-year-sort'] }],
+      
+      searchColumns: ["listing-title","listing-authors-html","listing-corresponding-author","listing-venue","listing-year","listing-group","listing-marker","listing-tone","listing-featured","listing-preprint","listing-codes","listing-paper","listing-code","listing-software"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-sequential-publications'] = new List('listing-sequential-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-optimization-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-authors-html','listing-corresponding-author','listing-venue','listing-year','listing-group','listing-marker','listing-tone','listing-featured','listing-paper','listing-preprint',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-year-sort'] }],
+      
+      searchColumns: ["listing-title","listing-authors-html","listing-corresponding-author","listing-venue","listing-year","listing-group","listing-marker","listing-tone","listing-featured","listing-paper","listing-preprint"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-optimization-publications'] = new List('listing-optimization-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-cyber-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-authors-html','listing-corresponding-author','listing-venue','listing-year','listing-group','listing-marker','listing-tone','listing-featured','listing-paper','listing-preprint','listing-code','listing-software',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-year-sort'] }],
+      
+      searchColumns: ["listing-title","listing-authors-html","listing-corresponding-author","listing-venue","listing-year","listing-group","listing-marker","listing-tone","listing-featured","listing-paper","listing-preprint","listing-code","listing-software"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-cyber-publications'] = new List('listing-cyber-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-broader-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-authors-html','listing-corresponding-author','listing-venue','listing-year','listing-group','listing-marker','listing-tone','listing-featured','listing-preprint','listing-paper','listing-code','listing-testbed','listing-software',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-year-sort'] }],
+      
+      searchColumns: ["listing-title","listing-authors-html","listing-corresponding-author","listing-venue","listing-year","listing-group","listing-marker","listing-tone","listing-featured","listing-preprint","listing-paper","listing-code","listing-testbed","listing-software"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-broader-publications'] = new List('listing-broader-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-policy-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-authors-html','listing-corresponding-author','listing-venue','listing-year','listing-group','listing-marker','listing-tone','listing-featured','listing-paper','listing-preprint',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-year-sort'] }],
+      
+      searchColumns: ["listing-title","listing-authors-html","listing-corresponding-author","listing-venue","listing-year","listing-group","listing-marker","listing-tone","listing-featured","listing-paper","listing-preprint"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-policy-publications'] = new List('listing-policy-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TSYFSJPRKH"></script>
 
 <script type="text/javascript">
@@ -76,9 +218,42 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles/site.css">
+<meta property="og:title" content="Research – Wangkun Xu">
+<meta property="og:description" content="Publications and research themes in machine learning, optimisation, and power systems.">
+<meta property="og:site_name" content="Wangkun Xu">
 </head>
 
 <body class="nav-fixed">
@@ -89,7 +264,7 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Wangkun Xu Homepage</span>
+    <span class="navbar-title">Wangkun Xu</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -103,12 +278,12 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://xuwkk.github.io/blog/"> 
-<span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./research.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./software.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
@@ -118,12 +293,25 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
     <a class="nav-link" href="./supervision.html"> 
 <span class="menu-text">Supervision</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
-    <a href="https://www.linkedin.com/in/wangkun-xu/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/xuwkk" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-    <a href="https://scholar.google.com/citations?user=-RuGgBoAAAAJ&amp;hl=en" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-google"></i></a>
+    <a href="mailto:wangkun.xu18@imperial.ac.uk" title="Email" class="quarto-navigation-tool px-1" aria-label="Email"><i class="bi bi-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/wangkun-xu/" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/xuwkk" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://scholar.google.com/citations?user=-RuGgBoAAAAJ&amp;hl=en" title="Google Scholar" class="quarto-navigation-tool px-1" aria-label="Google Scholar"><i class="bi bi-google"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -136,19 +324,12 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#sequential-decision-making" id="toc-sequential-decision-making" class="nav-link active" data-scroll-target="#sequential-decision-making">Sequential Decision Making</a>
   <ul class="collapse">
-  <li><a href="#new-framework-for-data-optimization-co-design" id="toc-new-framework-for-data-optimization-co-design" class="nav-link" data-scroll-target="#new-framework-for-data-optimization-co-design">New Framework for Data-Optimization Co-design</a></li>
-  <li><a href="#decision-focused-learning-smart-predict-and-optimize" id="toc-decision-focused-learning-smart-predict-and-optimize" class="nav-link" data-scroll-target="#decision-focused-learning-smart-predict-and-optimize">Decision-Focused Learning (Smart Predict-and-Optimize)</a></li>
-  <li><a href="#constraint-learning-for-stability-constrained-optimization" id="toc-constraint-learning-for-stability-constrained-optimization" class="nav-link" data-scroll-target="#constraint-learning-for-stability-constrained-optimization">Constraint Learning for Stability Constrained Optimization</a></li>
-  </ul></li>
-  <li><a href="#new-methods-for-efficient-power-system-optimization" id="toc-new-methods-for-efficient-power-system-optimization" class="nav-link" data-scroll-target="#new-methods-for-efficient-power-system-optimization">New Methods for Efficient Power System Optimization</a>
-  <ul class="collapse">
-  <li><a href="#quantum-computing" id="toc-quantum-computing" class="nav-link" data-scroll-target="#quantum-computing">Quantum Computing</a></li>
-  </ul></li>
-  <li><a href="#power-system-digitalization-and-cyber-security" id="toc-power-system-digitalization-and-cyber-security" class="nav-link" data-scroll-target="#power-system-digitalization-and-cyber-security">Power System Digitalization and Cyber Security</a></li>
-  <li><a href="#other-researches" id="toc-other-researches" class="nav-link" data-scroll-target="#other-researches">Other Researches</a></li>
+  <li><a href="#learning-augmented-decision-making" id="toc-learning-augmented-decision-making" class="nav-link active" data-scroll-target="#learning-augmented-decision-making">Learning-augmented decision-making</a></li>
+  <li><a href="#efficient-power-system-optimisation" id="toc-efficient-power-system-optimisation" class="nav-link" data-scroll-target="#efficient-power-system-optimisation">Efficient power-system optimisation</a></li>
+  <li><a href="#digitalisation-and-cyberphysical-security" id="toc-digitalisation-and-cyberphysical-security" class="nav-link" data-scroll-target="#digitalisation-and-cyberphysical-security">Digitalisation and cyber–physical security</a></li>
+  <li><a href="#policy-and-governance" id="toc-policy-and-governance" class="nav-link" data-scroll-target="#policy-and-governance">Policy and governance</a></li>
+  <li><a href="#broader-machine-learning-research" id="toc-broader-machine-learning-research" class="nav-link" data-scroll-target="#broader-machine-learning-research">Broader machine-learning research</a></li>
   </ul>
 </nav>
     </div>
@@ -160,6 +341,11 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 <h1 class="title">Research</h1>
 </div>
 
+<div>
+  <div class="description">
+    Publications and research themes in machine learning, optimisation, and power systems.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page-left">
@@ -174,61 +360,868 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 </header>
 
 
-<p>I am insterested in the intersection of machine learning, optimisation, and system dynamics, with a focus on efficient and robust power system operation and control under high penetration of renewable.</p>
-<p>Here are some of my recent research works:</p>
-<section id="sequential-decision-making" class="level2">
-<h2 class="anchored" data-anchor-id="sequential-decision-making">Sequential Decision Making</h2>
-<section id="new-framework-for-data-optimization-co-design" class="level3">
-<h3 class="anchored" data-anchor-id="new-framework-for-data-optimization-co-design">New Framework for Data-Optimization Co-design</h3>
-<ul>
-<li><strong>Xu, Wangkun</strong>, Zhongda Chu, and Fei Teng. “LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations.” arXiv preprint arXiv:2505.05203 (2025). [<a href="https://arxiv.org/pdf/2505.05203">paper link</a>, <a href="https://github.com/xuwkk/lapso_exp">code</a>, <a href="research_material/20251020-Gabor.pdf">poster</a>].</li>
-</ul>
+<p>My research lies at the intersection of <strong>machine learning</strong>, <strong>optimisation</strong>, and <strong>system dynamics</strong>, with a focus on efficient, robust, and secure power-system operation and control under uncertainty and high penetrations of renewable energy.</p>
+<section id="learning-augmented-decision-making" class="level2">
+<h2 class="anchored" data-anchor-id="learning-augmented-decision-making">Learning-augmented decision-making</h2>
+<p>This theme brings prediction and operational decision-making into a single framework, including learning-augmented optimisation, decision-focused learning, machine unlearning, and data-driven stability constraints.</p>
+<div id="listing-sequential-publications" class="quarto-listing quarto-listing-container-custom">
+<div class="publication-list list">
+
+  <article class="publication-card research-pub" data-index="0" data-listing-year-sort="2026">
+    <div class="pub-visual tone-gold" aria-hidden="true">
+      
+        <span>DiffAPQP</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://arxiv.org/abs/2608.04189">Structured Differentiable Optimization for Efficient Decision-focused Learning in Power Systems</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong> and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">arXiv preprint arXiv:2608.04189</p>
+      
+    </div>
+    <div class="pub-actions">
+      
+      <a class="pub-action" href="https://arxiv.org/abs/2608.04189">Preprint</a>
+      
+        
+          <a class="pub-action" href="https://github.com/xuwkk/diffapqp_power_systems">Code · Power systems</a>
+        
+          <a class="pub-action" href="https://github.com/xuwkk/diffapqp">Code · DiffAPQP</a>
+        
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="1" data-listing-year-sort="2026">
+    <div class="pub-visual tone-gold" aria-hidden="true">
+      
+        <span>ICNN</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/11593421/">Input Convex Neural Network as a Surrogate in Stability-Constrained Optimization for IBR-Dominated Power Systems</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Hongyang Jia, Yi Wang, Ning Zhang, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/11593421/">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2606.26446">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/icnn_constraint_learning">Code</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="2" data-listing-year-sort="2026">
+    <div class="pub-visual tone-gold" aria-hidden="true">
+      
+        <span>LAPSO</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/11663065">Learning-Augmented Power System Operations: A Unified Optimization View</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Zhongda Chu, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/11663065">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2505.05203">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/lapso_exp">Code</a>
+      
+      
+      
+      
+      <a class="pub-action" href="software.html#lapso">Software</a>
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="3" data-listing-year-sort="2026">
+    <div class="pub-visual tone-teal" aria-hidden="true">
+      
+        <span>DFL</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/11122623">Decision-Focused Learning for Power System Decision-Making Under Uncertainty</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Haipeng Zhang, Ran Li, Qintao Du, Junyi Tao, Salvador Pineda, Georges Kariniotakis, Simon Camal, Claire Bizon Monroc, Mingyang Sun, Can Wan, <strong>Wangkun Xu</strong>, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/11122623">Paper</a>
+      
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="4" data-listing-year-sort="2025">
+    <div class="pub-visual tone-gold" aria-hidden="true">
+      
+        <span>STAB</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1109/PESGM52009.2025.11225374">On the Incorporation of Stability Constraints into Sequential Operational Scheduling</a>
+          
+        </p>
+        <span class="pub-year listing-year">2025</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Zhongda Chu, Florin Capitanescu, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">2025 IEEE Power &amp; Energy Society General Meeting (PESGM), 1–5</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1109/PESGM52009.2025.11225374">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2411.11652">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="5" data-listing-year-sort="2024">
+    <div class="pub-visual tone-teal" aria-hidden="true">
+      
+        <span>UNLRN</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/10472091">Task-Aware Machine Unlearning and Its Application in Load Forecasting</a>
+          
+        </p>
+        <span class="pub-year listing-year">2024</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong> and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/10472091">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2308.14412">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/task_aware_machine_unlearning">Code</a>
+      
+      
+      
+      
+      <a class="pub-action" href="software.html#task-aware-unlearning">Software</a>
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="6" data-listing-year-sort="2024">
+    <div class="pub-visual tone-teal" aria-hidden="true">
+      
+        <span>E2E-AT</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1609/aaai.v38i14.29556">E2E-AT: A Unified Framework for Tackling Uncertainty in Task-Aware End-to-End Learning</a>
+          
+        </p>
+        <span class="pub-year listing-year">2024</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Jianhong Wang, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">Proceedings of the AAAI Conference on Artificial Intelligence, 38(14), 16220–16227</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1609/aaai.v38i14.29556">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2312.10587">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/E2E-AT">Code</a>
+      
+      
+      
+      
+      <a class="pub-action" href="software.html#e2e-at">Software</a>
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="7" data-listing-year-sort="2024">
+    <div class="pub-visual tone-gold" aria-hidden="true">
+      
+        <span>FWD-AD</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1109/ISGTEUROPE62998.2024.10863723">Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation</a>
+          
+        </p>
+        <span class="pub-year listing-year">2024</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Qian Chen, Pudong Ge, Zhongda Chu, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">2024 IEEE PES Innovative Smart Grid Technologies Europe (ISGT EUROPE), 1–5</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1109/ISGTEUROPE62998.2024.10863723">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2407.15045">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/frequency_sample_ad">Code</a>
+      
+      
+      
+      
+      <a class="pub-action" href="software.html#frequency-sampling">Software</a>
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
-<section id="decision-focused-learning-smart-predict-and-optimize" class="level3">
-<h3 class="anchored" data-anchor-id="decision-focused-learning-smart-predict-and-optimize">Decision-Focused Learning (Smart Predict-and-Optimize)</h3>
-<ul>
-<li><p><strong>Xu, Wangkun</strong>, and Fei Teng. “Task-aware machine unlearning and its application in load forecasting.” IEEE Transactions on Power Systems (2024). [<a href="https://ieeexplore.ieee.org/abstract/document/10472091">paper link</a>, <a href="https://github.com/xuwkk/task_aware_machine_unlearning">code</a>].</p></li>
-<li><p><strong>Xu, Wangkun</strong>, Jianhong Wang, and Fei Teng. “E2E-AT: A Unified Framework for Tackling Uncertainty in Task-Aware End-to-End Learning.” In Proceedings of the AAAI Conference on Artificial Intelligence, vol.&nbsp;38, no. 14, pp.&nbsp;16220-16227. 2024. [<a href="https://arxiv.org/abs/2312.10587">paper link</a>, <a href="https://github.com/xuwkk/E2E-AT">code</a>].</p></li>
-<li><p>Zhang, Haipeng, <strong>Xu, Wangkun</strong>, et al.&nbsp;“Decision-Focused Learning for Power System Decision-Making Under Uncertainty.” IEEE Transactions on Power Systems (2025). [<a href="https://ieeexplore.ieee.org/abstract/document/11122623">paper link</a>].</p></li>
-</ul>
+<section id="efficient-power-system-optimisation" class="level2">
+<h2 class="anchored" data-anchor-id="efficient-power-system-optimisation">Efficient power-system optimisation</h2>
+<p>New computational approaches for difficult scheduling and operational problems, including quantum optimisation.</p>
+<div id="listing-optimization-publications" class="quarto-listing quarto-listing-container-custom">
+<div class="publication-list list">
+
+  <article class="publication-card research-pub" data-index="0" data-listing-year-sort="2026">
+    <div class="pub-visual tone-navy" aria-hidden="true">
+      
+        <span>QUBIT</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/11575095">Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Wei Hong, <strong>Wangkun Xu</strong><sup class="pub-corresponding-marker" title="Corresponding author" aria-label=" corresponding author">*</sup>, and Fei Teng</p>
+      
+        <p class="pub-corresponding">* Corresponding author</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Power Systems</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/11575095">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2502.15917">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
-<section id="constraint-learning-for-stability-constrained-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="constraint-learning-for-stability-constrained-optimization">Constraint Learning for Stability Constrained Optimization</h3>
-<ul>
-<li><p><strong>Xu, Wangkun</strong>, Zhongda Chu, Florin Capitanescu, and Fei Teng. “On the Incorporation of Stability Constraints into Sequential Operational Scheduling.” arXiv preprint arXiv:2411.11652 (2024) [<a href="https://arxiv.org/abs/2411.11652">paper link</a>].</p></li>
-<li><p><strong>Xu, Wangkun</strong>, Qian Chen, Pudong Ge, Zhongda Chu, and Fei Teng. “Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation.” ISFT-EU (2024) [<a href="https://arxiv.org/abs/2407.15045">paper link</a>, <a href="https://github.com/xuwkk/frequency_sample_ad">code</a>].</p></li>
-</ul>
+<section id="digitalisation-and-cyberphysical-security" class="level2">
+<h2 class="anchored" data-anchor-id="digitalisation-and-cyberphysical-security">Digitalisation and cyber–physical security</h2>
+<p>Methods that combine data, physical models, and robust control to protect increasingly digitalised power systems.</p>
+<div id="listing-cyber-publications" class="quarto-listing quarto-listing-container-custom">
+<div class="publication-list list">
+
+  <article class="publication-card research-pub" data-index="0" data-listing-year-sort="2026">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>DRONE</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1109/TII.2026.3657443">Drone-Assisted Cyber-Physical Stability-Constrained Resilience Enhancement for Postcontingency Distribution Networks</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Pudong Ge, <strong>Wangkun Xu</strong>, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Industrial Informatics, 22(5), 4258–4269</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1109/TII.2026.3657443">Paper</a>
+      
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="1" data-listing-year-sort="2023">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>AVAIL</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1109/POWERTECH55446.2023.10202786">Availability Adversarial Attack and Countermeasures for Deep Learning-based Load Forecasting</a>
+          
+        </p>
+        <span class="pub-year listing-year">2023</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong> and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">2023 IEEE Belgrade PowerTech</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1109/POWERTECH55446.2023.10202786">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2301.01832">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/AAA_Load_Forecast">Code</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="2" data-listing-year-sort="2023">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>RISK</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://link.springer.com/article/10.1007/s10207-022-00621-7">Cyber–Physical Risk Assessment for False Data Injection Attacks Considering Moving Target Defences</a>
+          
+        </p>
+        <span class="pub-year listing-year">2023</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Martin Higgins, <strong>Wangkun Xu</strong>, Fei Teng, and Thomas Parisini</p>
+      
+      <p class="pub-venue listing-venue">International Journal of Information Security, 22(3), 579–589</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://link.springer.com/article/10.1007/s10207-022-00621-7">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2202.10841">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="3" data-listing-year-sort="2022">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>PHY-MTD</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1109/ISGT-Europe54678.2022.9960436">Physical Verification of Data-Driven Cyberattack Detector in Power System: An MTD Approach</a>
+          
+        </p>
+        <span class="pub-year listing-year">2022</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Imad M. Jaimoukha, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">2022 IEEE PES Innovative Smart Grid Technologies Conference Europe (ISGT-Europe), 1–5</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1109/ISGT-Europe54678.2022.9960436">Paper</a>
+      
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="4" data-listing-year-sort="2022">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>DDET</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/9998121">Blending Data and Physics Against False Data Injection Attack: An Event-Triggered Moving Target Defence Approach</a>
+          
+        </p>
+        <span class="pub-year listing-year">2022</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Martin Higgins, Jianhong Wang, Imad M. Jaimoukha, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Smart Grid, 14(4), 3176–3188</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/9998121">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2204.12970">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/DDET-MTD">Code</a>
+      
+      
+      
+      
+      <a class="pub-action" href="software.html#ddet-mtd">Software</a>
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="5" data-listing-year-sort="2022">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>MTD</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/document/9905637">Robust Moving Target Defence Against False Data Injection Attacks in Power Grids</a>
+          
+        </p>
+        <span class="pub-year listing-year">2022</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong>, Imad M. Jaimoukha, and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">IEEE Transactions on Information Forensics and Security, 18, 29–40</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/document/9905637">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2111.06346">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/xuwkk/Robust_MTD">Code</a>
+      
+      
+      
+      
+      <a class="pub-action" href="software.html#robust-mtd">Software</a>
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="6" data-listing-year-sort="2022">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>DIGI</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://ieeexplore.ieee.org/abstract/document/9756414">Transition to Digitalized Paradigms for Security Control and Decentralized Electricity Market</a>
+          
+        </p>
+        <span class="pub-year listing-year">2022</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Federica Bellizio, <strong>Wangkun Xu</strong>, Dawei Qiu, Yujian Ye, Dimitrios Papadaskalopoulos, Jochen L. Cremer, Fei Teng, and Goran Strbac</p>
+      
+      <p class="pub-venue listing-venue">Proceedings of the IEEE, 111(7), 744–761</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://ieeexplore.ieee.org/abstract/document/9756414">Paper</a>
+      <a class="pub-action" href="https://repository.tudelft.nl/file/File_d6138bd7-79be-44a7-9eb9-4018d311129e">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="7" data-listing-year-sort="2020">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>I-A</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://arxiv.org/abs/2011.01816">A Deep Learning based Detection Method for Combined Integrity-Availability Cyber Attacks in Power System</a>
+          
+        </p>
+        <span class="pub-year listing-year">2020</span>
+      </div>
+      
+      <p class="pub-authors listing-authors"><strong>Wangkun Xu</strong> and Fei Teng</p>
+      
+      <p class="pub-venue listing-venue">arXiv preprint arXiv:2011.01816</p>
+      
+    </div>
+    <div class="pub-actions">
+      
+      <a class="pub-action" href="https://arxiv.org/abs/2011.01816">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
+<section id="policy-and-governance" class="level2">
+<h2 class="anchored" data-anchor-id="policy-and-governance">Policy and governance</h2>
+<p>Research on data governance, regulation, and the policy frameworks surrounding digital and connected infrastructure.</p>
+<div id="listing-policy-publications" class="quarto-listing quarto-listing-container-custom">
+<div class="publication-list list">
+
+  <article class="publication-card research-pub" data-index="0" data-listing-year-sort="2025">
+    <div class="pub-visual tone-gold" aria-hidden="true">
+      
+        <span>SOLAR</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1109/UPEC65436.2025.11279812">Assessing Land Eligibility for Solar Photovoltaic Deployment in the UK</a>
+          
+        </p>
+        <span class="pub-year listing-year">2025</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">A. Pedraza, E. Geirsson, F. Adams, M. Ahmad, N. Dawda, <strong>Wangkun Xu</strong>, Y. Yu, and Daphné Tuncer</p>
+      
+      <p class="pub-venue listing-venue">2025 60th International Universities Power Engineering Conference (UPEC), 1–6</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1109/UPEC65436.2025.11279812">Paper</a>
+      
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="1" data-listing-year-sort="2024">
+    <div class="pub-visual tone-teal" aria-hidden="true">
+      
+        <span>AIR</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1145/3646547.3689661">Poster: Unveiling Urban Emissions from Bangkok Air Monitoring</a>
+          
+        </p>
+        <span class="pub-year listing-year">2024</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Teeratat Bunsantrakul, Karl M. Christiaens, Adriana M. Duran Pabon, Bomi I. Owoka, Maria S. Velasco Garcia, <strong>Wangkun Xu</strong>, and Daphné Tuncer</p>
+      
+      <p class="pub-venue listing-venue">Proceedings of the 2024 ACM Internet Measurement Conference, 749–750</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1145/3646547.3689661">Paper</a>
+      
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="2" data-listing-year-sort="2024">
+    <div class="pub-visual tone-navy" aria-hidden="true">
+      
+        <span>IoT</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://arxiv.org/abs/2407.09117">Assessing the Efficacy of IoT-based Forest Fire Detection: A Practical Use Case</a>
+          
+        </p>
+        <span class="pub-year listing-year">2024</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Belcher Anthony, Miguel A. Esteva, Anthea Lam, Rizki Ramadhani, Achmad Rayhan, <strong>Wangkun Xu</strong>, and Daphné Tuncer</p>
+      
+      <p class="pub-venue listing-venue">arXiv preprint arXiv:2407.09117</p>
+      
+    </div>
+    <div class="pub-actions">
+      
+      <a class="pub-action" href="https://arxiv.org/abs/2407.09117">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="3" data-listing-year-sort="2022">
+    <div class="pub-visual tone-red" aria-hidden="true">
+      
+        <span>DATA</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://doi.org/10.1145/3538395.3545313">A Comparative Perspective of Data Regulation Frameworks and Their Implications for Connected Vehicles</a>
+          
+        </p>
+        <span class="pub-year listing-year">2022</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Laura Barrera Cano, Sidra Raza, Blessing Sekibo, Angeliki Siafaras, Quinn Wolf, Ziqiao Yin, <strong>Wangkun Xu</strong>, and Daphné Tuncer</p>
+      
+      <p class="pub-venue listing-venue">Proceedings of the ACM SIGCOMM Joint Workshops on TAURIN and BGI, 6–11</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://doi.org/10.1145/3538395.3545313">Paper</a>
+      
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
-<section id="new-methods-for-efficient-power-system-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="new-methods-for-efficient-power-system-optimization">New Methods for Efficient Power System Optimization</h2>
-<section id="quantum-computing" class="level3">
-<h3 class="anchored" data-anchor-id="quantum-computing">Quantum Computing</h3>
-<ul>
-<li>Hong, Wei, <strong>Xu, Wangkun (corresponding author)</strong>, and Fei Teng. “Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment.” arXiv preprint arXiv:2502.15917 (2025). [<a href="https://arxiv.org/pdf/2502.15917">paper link</a>].</li>
-</ul>
-</section>
-</section>
-<section id="power-system-digitalization-and-cyber-security" class="level2">
-<h2 class="anchored" data-anchor-id="power-system-digitalization-and-cyber-security">Power System Digitalization and Cyber Security</h2>
-<ul>
-<li><p><strong>Xu, Wangkun</strong>, Martin Higgins, Jianhong Wang, Imad M. Jaimoukha, and Fei Teng. “Blending data and physics against false data injection attack: An event-triggered moving target defence approach.” IEEE Transactions on Smart Grid 14, no. 4 (2022): 3176-3188. [<a href="https://ieeexplore.ieee.org/abstract/document/9998121">paper link</a>, <a href="https://github.com/xuwkk/DDET-MTD">code</a>].</p></li>
-<li><p><strong>Xu, Wangkun</strong>, Imad M. Jaimoukha, and Fei Teng. “Robust moving target defence against false data injection attacks in power grids.” IEEE Transactions on Information Forensics and Security 18 (2022): 29-40. [<a href="https://ieeexplore.ieee.org/document/9905637">paper link</a>, <a href="https://github.com/xuwkk/Robust_MTD">code</a>].</p></li>
-<li><p>Bellizio, Federica, <strong>Xu, Wangkun</strong>, Dawei Qiu, Yujian Ye, Dimitrios Papadaskalopoulos, Jochen L. Cremer, Fei Teng, and Goran Strbac. “Transition to digitalized paradigms for security control and decentralized electricity market.” Proceedings of the IEEE 111, no. 7 (2022): 744-761. [<a href="https://ieeexplore.ieee.org/abstract/document/9756414">paper link</a>].</p></li>
-<li><p>Higgins, Martin, <strong>Xu, Wangkun</strong>, Fei Teng, and Thomas Parisini. “Cyber–physical risk assessment for false data injection attacks considering moving target defences: Best practice application of respective cyber and physical reinforcement assets to defend against FDI attacks.” International Journal of Information Security 22, no. 3 (2023): 579-589. [<a href="https://link.springer.com/article/10.1007/s10207-022-00621-7">paper link</a>].</p></li>
-</ul>
-</section>
-<section id="other-researches" class="level2">
-<h2 class="anchored" data-anchor-id="other-researches">Other Researches</h2>
-<ul>
-<li><p>Buffelli, Davide, Jamie McGowan, <strong>Xu, Wangkun (internship work)</strong>, Alexandru Cioba, Da-shan Shiu, Guillaume Hennequin, and Alberto Bernacchia. “Exact, Tractable Gauss-Newton Optimization in Deep Reversible Architectures Reveal Poor Generalization.” In The Thirty-eighth Annual Conference on Neural Information Processing Systems. [<a href="https://arxiv.org/abs/2411.07979">paper link</a>].</p></li>
-<li><p>Wang, Jianhong, <strong>Xu, Wangkun (co-first author)</strong>, Yunjie Gu, Wenbin Song, and Tim C. Green. “Multi-agent reinforcement learning for active voltage control on power distribution networks.” Advances in neural information processing systems 34 (2021): 3271-3284. [<a href="https://arxiv.org/abs/2110.14300">paper link</a>, <a href="https://github.com/Future-Power-Networks/MAPDN">code</a>].</p></li>
-</ul>
+<section id="broader-machine-learning-research" class="level2">
+<h2 class="anchored" data-anchor-id="broader-machine-learning-research">Broader machine-learning research</h2>
+<p>Selected work in uncertainty quantification, deep-learning optimisation, and multi-agent reinforcement learning.</p>
+<div id="listing-broader-publications" class="quarto-listing quarto-listing-container-custom">
+<div class="publication-list list">
+
+  <article class="publication-card research-pub" data-index="0" data-listing-year-sort="2026">
+    <div class="pub-visual tone-navy" aria-hidden="true">
+      
+        <span>FLOW-PCE</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://arxiv.org/abs/2603.20472">Flow-based Polynomial Chaos Expansion for Uncertainty Quantification in Power System Dynamic Simulation</a>
+          
+        </p>
+        <span class="pub-year listing-year">2026</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Le Fang, <strong>Wangkun Xu</strong><sup class="pub-corresponding-marker" title="Corresponding author" aria-label=" corresponding author">*</sup>, and Fei Teng</p>
+      
+        <p class="pub-corresponding">* Corresponding author</p>
+      
+      <p class="pub-venue listing-venue">arXiv preprint arXiv:2603.20472</p>
+      
+    </div>
+    <div class="pub-actions">
+      
+      <a class="pub-action" href="https://arxiv.org/abs/2603.20472">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="1" data-listing-year-sort="2024">
+    <div class="pub-visual tone-navy" aria-hidden="true">
+      
+        <span>G-N</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://papers.nips.cc/paper_files/paper/2024/hash/f144ab9985c739a5091ec188a2688644-Abstract-Conference.html">Exact, Tractable Gauss–Newton Optimization in Deep Reversible Architectures Reveals Poor Generalization</a>
+          
+        </p>
+        <span class="pub-year listing-year">2024</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Davide Buffelli, Jamie McGowan, <strong>Wangkun Xu</strong>, Alexandru Cioba, Da-shan Shiu, Guillaume Hennequin, and Alberto Bernacchia</p>
+      
+      <p class="pub-venue listing-venue">Advances in Neural Information Processing Systems, 37, 133541–133570</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://papers.nips.cc/paper_files/paper/2024/hash/f144ab9985c739a5091ec188a2688644-Abstract-Conference.html">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2411.07979">Preprint</a>
+      
+      
+      
+      
+      
+    </div>
+  </article>
+
+  <article class="publication-card research-pub" data-index="2" data-listing-year-sort="2021">
+    <div class="pub-visual tone-navy" aria-hidden="true">
+      
+        <span>MARL</span>
+      
+    </div>
+    <div class="pub-body">
+      <div class="pub-topline">
+        <p class="pub-title listing-title">
+          
+            <a href="https://proceedings.neurips.cc/paper/2021/hash/1a6727711b84fd1efbb87fc565199d13-Abstract.html">Multi-Agent Reinforcement Learning for Active Voltage Control on Power Distribution Networks</a>
+          
+        </p>
+        <span class="pub-year listing-year">2021</span>
+      </div>
+      
+      <p class="pub-authors listing-authors">Jianhong Wang, <strong>Wangkun Xu</strong> (co-first author), Yunjie Gu, Wenbin Song, and Tim C. Green</p>
+      
+      <p class="pub-venue listing-venue">Advances in Neural Information Processing Systems, 34, 3271–3284</p>
+      
+    </div>
+    <div class="pub-actions">
+      <a class="pub-action" href="https://proceedings.neurips.cc/paper/2021/hash/1a6727711b84fd1efbb87fc565199d13-Abstract.html">Paper</a>
+      <a class="pub-action" href="https://arxiv.org/abs/2110.14300">Preprint</a>
+      
+        <a class="pub-action" href="https://github.com/Future-Power-Networks/MAPDN">Code</a>
+      
+      <a class="pub-action" href="https://github.com/xuwkk/gen_pandapower_pv">Testbeds</a>
+      
+      
+      <a class="pub-action" href="software.html#mapdn">Software</a>
+    </div>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -333,6 +1326,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -647,8 +1645,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Wangkun Xu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Wangkun Xu</title>
+<link>https://xuwkk.github.io/wangkun_xu/blog/</link>
+<atom:link href="https://xuwkk.github.io/wangkun_xu/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Learning notes on machine learning, optimisation, and power systems.</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Mon, 21 Sep 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Power System Operation: AC and DC Power Flow Model</title>
+  <dc:creator>Wangkun Xu</dc:creator>
+  <link>https://xuwkk.github.io/wangkun_xu/blog/posts/power-flow-modeling/</link>
+  <description><![CDATA[ Academic website of Dr Wangkun Xu ]]></description>
+  <category>Power systems</category>
+  <category>English</category>
+  <guid>https://xuwkk.github.io/wangkun_xu/blog/posts/power-flow-modeling/</guid>
+  <pubDate>Mon, 21 Sep 2026 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>PyTorch FX symbolic_trace 学习笔记</title>
+  <dc:creator>Wangkun Xu</dc:creator>
+  <link>https://xuwkk.github.io/wangkun_xu/blog/posts/symbolic-trace/</link>
+  <description><![CDATA[ Academic website of Dr Wangkun Xu ]]></description>
+  <category>PyTorch</category>
+  <category>中文</category>
+  <guid>https://xuwkk.github.io/wangkun_xu/blog/posts/symbolic-trace/</guid>
+  <pubDate>Sun, 02 Aug 2026 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

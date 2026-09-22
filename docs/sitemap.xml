@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/teaching_ml4ps.html</loc>
-    <lastmod>2025-11-09T20:38:11.434Z</lastmod>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching/summer-school-2026.html</loc>
+    <lastmod>2026-08-06T15:13:20.676Z</lastmod>
   </url>
   <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/teaching_datascience.html</loc>
-    <lastmod>2026-02-22T14:10:20.809Z</lastmod>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching/ml-energy-systems.html</loc>
+    <lastmod>2026-08-06T15:13:20.675Z</lastmod>
   </url>
   <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/news.html</loc>
-    <lastmod>2026-02-22T13:47:43.761Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/research.html</loc>
-    <lastmod>2025-11-24T12:17:34.979Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/teaching.html</loc>
-    <lastmod>2025-11-24T12:03:22.790Z</lastmod>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching/data-science-ta.html</loc>
+    <lastmod>2026-08-06T15:13:20.675Z</lastmod>
   </url>
   <url>
     <loc>https://xuwkk.github.io/wangkun_xu/supervision.html</loc>
-    <lastmod>2026-01-04T22:21:47.214Z</lastmod>
+    <lastmod>2026-09-22T15:16:32.853Z</lastmod>
   </url>
   <url>
-    <loc>https://xuwkk.github.io/wangkun_xu/teaching_datasrienceta.html</loc>
-    <lastmod>2025-11-09T20:03:29.199Z</lastmod>
+    <loc>https://xuwkk.github.io/wangkun_xu/research.html</loc>
+    <lastmod>2026-09-22T15:27:19.809Z</lastmod>
   </url>
   <url>
     <loc>https://xuwkk.github.io/wangkun_xu/index.html</loc>
-    <lastmod>2026-02-22T14:09:56.577Z</lastmod>
+    <lastmod>2026-09-22T15:21:02.416Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/blog/posts/power-flow-modeling/index.html</loc>
+    <lastmod>2026-09-22T15:47:47.536Z</lastmod>
   </url>
   <url>
     <loc>https://xuwkk.github.io/wangkun_xu/about.html</loc>
-    <lastmod>2024-12-21T10:57:25.000Z</lastmod>
+    <lastmod>2026-08-03T15:47:50.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/blog/index.html</loc>
+    <lastmod>2026-08-06T15:50:51.854Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/blog/posts/symbolic-trace/index.html</loc>
+    <lastmod>2026-08-06T16:54:33.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/news.html</loc>
+    <lastmod>2026-07-29T12:03:51.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/software.html</loc>
+    <lastmod>2026-08-06T15:41:49.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching.html</loc>
+    <lastmod>2026-09-22T15:13:43.367Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching/ibr-summer-school-2026.html</loc>
+    <lastmod>2026-09-22T15:13:46.396Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xuwkk.github.io/wangkun_xu/teaching/ml4ps.html</loc>
+    <lastmod>2026-08-06T15:13:20.674Z</lastmod>
   </url>
 </urlset>

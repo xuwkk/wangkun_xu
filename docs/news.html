@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dr.&nbsp;Wangkun Xu">
-<meta name="description" content="Dr.&nbsp;Wangkun Xu’s Academic Website">
+<meta name="author" content="Dr Wangkun Xu">
+<meta name="description" content="Academic website of Dr Wangkun Xu">
 
-<title>News – Wangkun Xu Homepage</title>
+<title>News – Wangkun Xu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4412607aa6b8aa0fd61536c99a29c053.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-de02b4b42a964af47b078c552af716e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b7f71073174c40cd8ab8dae1e37c9972.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +68,36 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-all-news .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-category','listing-text',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-date","listing-category","listing-text"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-all-news'] = new List('listing-all-news', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TSYFSJPRKH"></script>
 
 <script type="text/javascript">
@@ -76,9 +107,42 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles/site.css">
+<meta property="og:title" content="News – Wangkun Xu">
+<meta property="og:description" content="Research, teaching, awards, and academic updates.">
+<meta property="og:site_name" content="Wangkun Xu">
 </head>
 
 <body class="nav-fixed">
@@ -89,7 +153,7 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Wangkun Xu Homepage</span>
+    <span class="navbar-title">Wangkun Xu</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -103,12 +167,12 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://xuwkk.github.io/blog/"> 
-<span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./software.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
@@ -118,12 +182,25 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
     <a class="nav-link" href="./supervision.html"> 
 <span class="menu-text">Supervision</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./news.html" aria-current="page"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
-    <a href="https://www.linkedin.com/in/wangkun-xu/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/xuwkk" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-    <a href="https://scholar.google.com/citations?user=-RuGgBoAAAAJ&amp;hl=en" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-google"></i></a>
+    <a href="mailto:wangkun.xu18@imperial.ac.uk" title="Email" class="quarto-navigation-tool px-1" aria-label="Email"><i class="bi bi-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/wangkun-xu/" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/xuwkk" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://scholar.google.com/citations?user=-RuGgBoAAAAJ&amp;hl=en" title="Google Scholar" class="quarto-navigation-tool px-1" aria-label="Google Scholar"><i class="bi bi-google"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -132,27 +209,23 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2025</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2024</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">News</h1>
 </div>
 
+<div>
+  <div class="description">
+    Research, teaching, awards, and academic updates.
+  </div>
+</div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -164,39 +237,255 @@ gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 </header>
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2025</h2>
-<ul>
-<li><strong>2025-12-01</strong> [Paper] The paper <em>Assessing land eligibility for solar photovoltaic deployment in the UK</em> led by Master students from Energy Futures Lab, Imperial, has been published at the <em>IEEE 2025 60th International Universities Power Engineering Conference (UPEC)</em> [<a href="https://ieeexplore.ieee.org/document/11279812">paper link</a>].</li>
-<li><strong>2025-11-12</strong> [Academic Event] I presented <em>“Both Data and Physics Matter, But How to Integrate Is a Problem!”</em> at Gabor’s Lecture, hosted by the Department of Electrical and Electronic Engineering, Imperial College London [<a href="research_material/20251020-Gabor.pdf">poster link</a>].</li>
-<li><strong>2025-09-01</strong> [Award] I was awarded the <strong>Best Poster Award</strong> at the <em>“2nd International Summer School on IBR-dominated Power Systems”</em>, organized by Imperial College and Tsinghua University, hosted by Tsinghua University, Beijing, China.</li>
-<li><strong>2025-09-01</strong> [Academic Event] I completed the course <em>“2nd International Summer School on IBR-dominated Power Systems”</em>, organized by Imperial College and Tsinghua University, hosted by Tsinghua University, Beijing, China.</li>
-<li><strong>2025-09-01</strong> [Academic Event] I presented <em>“On the Incorporation of Stability Constraints into Sequential Operational Scheduling”</em> at the <em>“2nd International Summer School on IBR-dominated Power Systems”</em>, organized by Imperial College and Tsinghua University, hosted by Tsinghua University, Beijing, China.</li>
-<li><strong>2025-08-15</strong> [Academic Event] I started as a visiting scholar at Tsinghua University, Beijing, China for 2 months, hosted by Assoc. Prof.&nbsp;Ning Zhang.</li>
-<li><strong>2025-07-01</strong> [Academic Event] Mr.&nbsp;Guoxuan Cui presented our work <em>“On the Incorporation of Stability Constraints into Sequential Operational Scheduling”</em> at the <em>“IEEE PES General Meeting 2025”</em> in Austin, TX (paper forum section).</li>
-<li><strong>2025-05-10</strong> [Paper] New preprint: <em>“LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations”</em> [<a href="https://arxiv.org/abs/2505.05203">paper link</a>].</li>
-<li><strong>2025-04-01</strong> [Academic Event] We hosted the inaugural launch of the <em>“CIGRE UK London Region Universities Hub”</em> at Imperial College London on 6 May. Registration was available <a href="https://www.eventbrite.co.uk/e/empowering-the-next-generation-tickets-1308130025119?aff=oddtdtcreator">here</a>.</li>
-<li><strong>2025-03-01</strong> [Award] I was officially awarded <strong>Associate Fellow of the Higher Education Academy (AFHEA)</strong> by Advance HE.</li>
-<li><strong>2025-02-26</strong> [Academic Event] I presented my work on <em>“Smart Predict and Optimize for Energy Forecast”</em> in the <em>“G-PST/ESIG Webinar Series: Reliable Energy Forecasting for Power System Operations”</em> with Dr.&nbsp;Akylas Stratigakos. Slides and recording are available on the website.</li>
-<li><strong>2025-02-21</strong> [Paper] New preprint: <em>“Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment”</em> led by Mr.&nbsp;Wei Hong [<a href="https://arxiv.org/pdf/2502.15917">paper link</a>].</li>
-<li><strong>2025-02-01</strong> [Paper] Our paper <em>“On the Incorporation of Stability Constraints into Sequential Operational Scheduling”</em> [<a href="https://arxiv.org/abs/2411.11652">paper link</a>] was accepted for the <em>“IEEE PES General Meeting 2025”</em>.</li>
-</ul>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2024</h2>
-<ul>
-<li><strong>2024-11-18</strong> [Paper] New preprint: <em>“On the Incorporation of Stability Constraints into Sequential Operational Scheduling”</em> [<a href="https://arxiv.org/abs/2411.11652">paper link</a>].</li>
-<li><strong>2024-11-01</strong> [Personal] My Ph.D.&nbsp;thesis <em>“Blending Data and Model for Robust and Secure Power System Operations”</em> was published by Imperial [<a href="https://spiral.imperial.ac.uk/handle/10044/1/112459">thesis link</a>].</li>
-<li><strong>2024-10-01</strong> [Paper] Our paper <em>Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation</em> was accepted at <strong>IEEE PES ISGT-EU 2024</strong> [<a href="https://arxiv.org/abs/2407.15045">paper link</a>].</li>
-<li><strong>2024-09-26</strong> [Paper] My internship paper <em>“Exact, Tractable Gauss-Newton Optimization in Deep Reversible Architectures Reveal Poor Generalization”</em> (MediaTek Research, UK) was accepted at <strong>NeurIPS 2025</strong> [<a href="https://arxiv.org/abs/2411.07979">paper link</a>].</li>
-<li><strong>2024-07-01</strong> [Personal] I started my position as Research Associate in the <a href="https://www.imperial.ac.uk/electrical-engineering/research/control-and-power/">Control and Power Research Group</a>, Department of EEE, Imperial College London.</li>
-<li><strong>2024-04-17</strong> [Personal] I successfully defended my Ph.D.&nbsp;thesis.</li>
-</ul>
+<p>Research, teaching, awards, and academic activities, listed most recent first.</p>
+<div id="listing-all-news" class="quarto-listing quarto-listing-container-custom">
+<div class="news-list list">
+
+  <article class="news-item" data-index="0" data-listing-date-sort="1788303600000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-09-02">2026-09-02</time>
+      <span class="news-category listing-category">Teaching</span>
+    </div>
+    <p class="news-copy listing-title">Delivered the guest lecture <em>An Open-Source Toolbox for Embedding Neural Stability Surrogates in Stability-Constrained Optimization</em> at the University of Strathclyde, Glasgow. <a href="teaching/ibr-summer-school-2026.html">Course details</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="1" data-listing-date-sort="1788303600000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-09-02">2026-09-02</time>
+      <span class="news-category listing-category">Software</span>
+    </div>
+    <p class="news-copy listing-title">Open-sourced NCET, a toolbox for embedding neural stability surrogates in stability-constrained optimization. <a href="https://github.com/xuwkk/NCET">NCET package</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="2" data-listing-date-sort="1788303600000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-09-02">2026-09-02</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title"><a href="https://ieeexplore.ieee.org/abstract/document/11663065">Paper</a> · <a href="https://arxiv.org/abs/2505.05203">Preprint</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="3" data-listing-date-sort="1787871600000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-08-28">2026-08-28</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Presented <em>Input Convex Neural Network as a Surrogate in Stability-Constrained Optimization for IBR-dominated Power Systems</em>.</p>
+  </article>
+
+  <article class="news-item" data-index="4" data-listing-date-sort="1786057200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-08-07">2026-08-07</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Presented <em>Structured Differentiable Optimization for Efficient Decision-Focused Learning in Power Systems</em> at the EPICS Bimonthly Meeting, covering theory, software, and IEEE 118-bus evidence. <a href="material/research/20260806-diffapqp_presentation.pdf">Slides</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="5" data-listing-date-sort="1785538800000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-08-01">2026-08-01</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title"><a href="https://ieeexplore.ieee.org/abstract/document/11593421">Paper</a> · <a href="https://arxiv.org/abs/2606.26446">Preprint</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="6" data-listing-date-sort="1785538800000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-08-01">2026-08-01</time>
+      <span class="news-category listing-category">Software</span>
+    </div>
+    <p class="news-copy listing-title">Open-sourced DiffAPQP and the accompanying power-system experiments for <em>Structured Differentiable Optimization for Efficient Decision-focused Learning in Power Systems</em>. <a href="https://github.com/xuwkk/diffapqp">DiffAPQP package</a> · <a href="https://github.com/xuwkk/diffapqp_power_systems">Power-system experiments</a> · <a href="https://arxiv.org/abs/2608.04189">Preprint</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="7" data-listing-date-sort="1785538800000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-08-01">2026-08-01</time>
+      <span class="news-category listing-category">Teaching</span>
+    </div>
+    <p class="news-copy listing-title">Delivered the guest lecture <em>Introduction to Machine Learning (with Examples in Power Systems)</em> for 2026 Imperial Summer School on sustainability. <a href="teaching/summer-school-2026.html">Course details</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="8" data-listing-date-sort="1785538800000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-08-01">2026-08-01</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title">Our paper <em>Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment</em> was accepted for publication in <em>IEEE Transactions on Power Systems</em>. <a href="https://ieeexplore.ieee.org/abstract/document/11575095">Paper</a> · <a href="https://arxiv.org/abs/2502.15917">Preprint</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="9" data-listing-date-sort="1772064000000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2026-02-26">2026-02-26</time>
+      <span class="news-category listing-category">Teaching</span>
+    </div>
+    <p class="news-copy listing-title">Delivered the guest lecture <em>Introduction to Machine Learning (with Applications in Energy Systems)</em> for MECH70039 at Energy Futures Lab, Imperial College London. <a href="teaching/ml-energy-systems.html">Course details</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="10" data-listing-date-sort="1764547200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-12-01">2025-12-01</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title"><em>Assessing Land Eligibility for Solar Photovoltaic Deployment in the UK</em>, led by MSc students from Energy Futures Lab, was published at IEEE UPEC 2025. <a href="https://ieeexplore.ieee.org/document/11279812">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="11" data-listing-date-sort="1762905600000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-11-12">2025-11-12</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Presented <em>Both Data and Physics Matter, But How to Integrate Is a Problem!</em> at the Department of Electrical and Electronic Engineering's Gabor Lecture. <a href="material/research/20251020-Gabor.pdf">Poster</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="12" data-listing-date-sort="1756681200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-09-01">2025-09-01</time>
+      <span class="news-category listing-category">Award</span>
+    </div>
+    <p class="news-copy listing-title">Received the Best Poster Award at the 2nd International Summer School on IBR-Dominated Power Systems, hosted by Tsinghua University in Beijing.</p>
+  </article>
+
+  <article class="news-item" data-index="13" data-listing-date-sort="1756681200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-09-01">2025-09-01</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Completed the 2nd International Summer School on IBR-Dominated Power Systems, organised by Imperial College London and Tsinghua University.</p>
+  </article>
+
+  <article class="news-item" data-index="14" data-listing-date-sort="1756681200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-09-01">2025-09-01</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Presented <em>On the Incorporation of Stability Constraints into Sequential Operational Scheduling</em> at the 2nd International Summer School on IBR-Dominated Power Systems.</p>
+  </article>
+
+  <article class="news-item" data-index="15" data-listing-date-sort="1755212400000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-08-15">2025-08-15</time>
+      <span class="news-category listing-category">Career</span>
+    </div>
+    <p class="news-copy listing-title">Began a two-month visiting scholarship in the Department of Electrical Engineering at Tsinghua University, hosted by Assoc. Prof. Ning Zhang.</p>
+  </article>
+
+  <article class="news-item" data-index="16" data-listing-date-sort="1751324400000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-07-01">2025-07-01</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Guoxuan Cui presented our work on stability constraints in sequential operational scheduling at the IEEE PES General Meeting 2025 in Austin.</p>
+  </article>
+
+  <article class="news-item" data-index="17" data-listing-date-sort="1746831600000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-05-10">2025-05-10</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title">Released the preprint <em>LAPSO: A Unified Optimization View for Learning-Augmented Power System Operations</em>. <a href="https://arxiv.org/abs/2505.05203">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="18" data-listing-date-sort="1743462000000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-04-01">2025-04-01</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Helped host the inaugural launch of the CIGRE UK London Region Universities Hub at Imperial College London.</p>
+  </article>
+
+  <article class="news-item" data-index="19" data-listing-date-sort="1740787200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-03-01">2025-03-01</time>
+      <span class="news-category listing-category">Award</span>
+    </div>
+    <p class="news-copy listing-title">Awarded Associate Fellowship of the Higher Education Academy (AFHEA) by Advance HE.</p>
+  </article>
+
+  <article class="news-item" data-index="20" data-listing-date-sort="1740528000000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-02-26">2025-02-26</time>
+      <span class="news-category listing-category">Event</span>
+    </div>
+    <p class="news-copy listing-title">Presented <em>Smart Predict and Optimize for Energy Forecast</em> with Dr Akylas Stratigakos in the G-PST/ESIG Reliable Energy Forecasting webinar series.</p>
+  </article>
+
+  <article class="news-item" data-index="21" data-listing-date-sort="1740096000000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-02-21">2025-02-21</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title">Released <em>Qubit-Efficient Quantum Annealing for Stochastic Unit Commitment</em>, led by Wei Hong. <a href="https://arxiv.org/pdf/2502.15917">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="22" data-listing-date-sort="1738368000000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2025-02-01">2025-02-01</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title"><em>On the Incorporation of Stability Constraints into Sequential Operational Scheduling</em> was accepted for the IEEE PES General Meeting 2025. <a href="https://arxiv.org/abs/2411.11652">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="23" data-listing-date-sort="1731888000000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2024-11-18">2024-11-18</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title">Released <em>On the Incorporation of Stability Constraints into Sequential Operational Scheduling</em>. <a href="https://arxiv.org/abs/2411.11652">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="24" data-listing-date-sort="1730419200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2024-11-01">2024-11-01</time>
+      <span class="news-category listing-category">Career</span>
+    </div>
+    <p class="news-copy listing-title">My PhD thesis, <em>Blending Data and Model for Robust and Secure Power System Operations</em>, was published by Imperial College London. <a href="https://spiral.imperial.ac.uk/handle/10044/1/112459">Thesis</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="25" data-listing-date-sort="1727737200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2024-10-01">2024-10-01</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title"><em>Efficient Sampling for Data-Driven Frequency Stability Constraint via Forward-Mode Automatic Differentiation</em> was accepted at IEEE PES ISGT Europe 2024. <a href="https://arxiv.org/abs/2407.15045">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="26" data-listing-date-sort="1727305200000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2024-09-26">2024-09-26</time>
+      <span class="news-category listing-category">Paper</span>
+    </div>
+    <p class="news-copy listing-title">The MediaTek Research internship work <em>Exact, Tractable Gauss–Newton Optimization in Deep Reversible Architectures Reveals Poor Generalization</em> was accepted at NeurIPS. <a href="https://arxiv.org/abs/2411.07979">Paper</a>.</p>
+  </article>
+
+  <article class="news-item" data-index="27" data-listing-date-sort="1719788400000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2024-07-01">2024-07-01</time>
+      <span class="news-category listing-category">Career</span>
+    </div>
+    <p class="news-copy listing-title">Started as a Research Associate in the Control and Power Research Group, Department of Electrical and Electronic Engineering, Imperial College London.</p>
+  </article>
+
+  <article class="news-item" data-index="28" data-listing-date-sort="1713308400000">
+    <div class="news-meta">
+      <time class="news-date listing-date" datetime="2024-04-17">2024-04-17</time>
+      <span class="news-category listing-category">Career</span>
+    </div>
+    <p class="news-copy listing-title">Successfully defended my PhD thesis.</p>
+  </article>
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="all-news-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -301,6 +590,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -615,8 +909,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Wangkun Xu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

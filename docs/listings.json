@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "/research.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/power-flow-modeling/index.html",
+      "/blog/posts/symbolic-trace/index.html"
+    ]
+  },
+  {
+    "listing": "/news.html",
+    "items": []
+  },
+  {
+    "listing": "/software.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
+    "items": []
+  }
+]
