@@ -76,6 +76,7 @@ gtag('js', new Date());
 gtag('config', 'G-TSYFSJPRKH', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script data-goatcounter="https://tedwxu.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
 
 
 <link rel="stylesheet" href="../styles/site.css">
@@ -704,7 +705,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Wangkun Xu</p>
+<p>© 2026 Wangkun Xu · <span id="site-views"></span></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -714,6 +715,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>
+fetch("https://tedwxu.goatcounter.com/counter/TOTAL.json")
+  .then(function (response) { return response.json(); })
+  .then(function (data) {
+    var views = document.getElementById("site-views");
+    if (views && data && data.count) views.textContent = data.count + " views";
+  });
+</script>
 
 
 
